@@ -1,0 +1,13 @@
+html {
+    height: 100%;
+    margin: 0%;
+}
+
+body {
+    background: rgb(212, 200, 180);
+    min-height: 100vh;
+    max-width: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
