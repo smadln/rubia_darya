@@ -40,7 +40,6 @@ body {
 .content a:hover {
     color: rgb(140, 191, 239);
     font-size: 15px;
-    text-transform: lowercase;
     margin-top:0;
     margin-right:0;
     line-height: 2;
