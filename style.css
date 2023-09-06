@@ -12,6 +12,13 @@ body {
     background-attachment: fixed;
 }
 
+.name {
+    color: rgb(145, 0, 0);
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: none;
+    font-family: Georgia, Tahoma, Verdana;
+}
 .content a {
     color: rgb(145, 0, 0);
     font-size: 15px;
