@@ -22,9 +22,11 @@ body {
 .content a {
     color: rgb(145, 0, 0);
     font-size: 15px;
+    text-align: right;
     text-decoration: none;
     text-transform: lowercase;
     font-family: Georgia, Tahoma, Verdana;
+    
 }
 
 .content a:hover {
