@@ -16,21 +16,27 @@ body {
     color: rgb(145, 0, 0);
     font-size: 18px;
     text-decoration: none;
-    text-transform: none;
     font-family: Georgia, Tahoma, Verdana;
+    margin-left: 0%;
+    margin-right: 0%; 
+    text-align: left; 
 }
+
 .content a {
     color: rgb(145, 0, 0);
     font-size: 15px;
-    text-align: right;
+    text-align: justify;
     text-decoration: none;
     text-transform: lowercase;
     font-family: Georgia, Tahoma, Verdana;
-    
+    margin-top: 0%; 
+    margin-right: 0%;
 }
 
 .content a:hover {
-    color: rgb(86, 197, 238);
+    color: rgb(159, 217, 238);
     font-size: 15px;
-    text-transform: lowercase
+    text-transform: lowercase;
+    margin-top:0;
+    margin-right:0;
 }
