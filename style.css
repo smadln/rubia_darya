@@ -20,6 +20,7 @@ body {
     margin-top: 5vmin;
     margin-left: 5vmin;
     margin-right: 0%; 
+    margin-bottom: 0px;
     text-align: left; 
 }
 
@@ -37,7 +38,7 @@ body {
 }
 
 .content a:hover {
-    color: rgb(159, 217, 238);
+    color: rgb(140, 191, 239);
     font-size: 15px;
     text-transform: lowercase;
     margin-top:0;
