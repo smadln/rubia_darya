@@ -49,11 +49,11 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 30%;
 }
 
-#persian {
-    width: 600px;
-    left: 595px;
+#saltbag {
+    width: 400px;
+    left: 895px;
     z-index: -1;
 }
