@@ -11,3 +11,17 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+.content a {
+    color: rgb(145, 0, 0);
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-family: Georgia, Tahoma, Verdana;
+}
+
+.content a:hover {
+    color: rgb(86, 197, 238);
+    font-size: 15px;
+    text-transform: lowercase
+}
