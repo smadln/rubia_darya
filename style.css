@@ -66,30 +66,31 @@ body, ul {
 
 /* Style the header */
 header {
-    background-color: red;
+    background-color: darkred;
     color: white;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
 }
 
 /* Style the navbar */
 .navbar-left h1 {
     margin: 0;
+    color: darkred; /* Text color of the title */
 }
 
 /* Style the hamburger menu toggle */
 .menu-toggle {
-    display: none;
-    flex-direction: column;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .bar {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: darkred; /* Bar color */
     margin: 3px 0;
 }
 
@@ -97,7 +98,7 @@ header {
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: red;
+    background-color: darkred;
     right: 20px;
     top: 50px;
     border: 1px solid white;
