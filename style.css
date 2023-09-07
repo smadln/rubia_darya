@@ -76,7 +76,11 @@ header {
 
 /* Style the navbar */
 .navbar-left h1 {
-    margin: 0;
+    margin-top: 5vmin;
+    margin-left: 5vmin;
+    margin-right: 0%; 
+    margin-bottom: 0px;
+    text-align: left; 
     color: rgb(145, 0, 0); /* Text color of the title */
     font-size: 20px;
 
