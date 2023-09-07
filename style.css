@@ -94,7 +94,7 @@ header {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 30px; /* Adjust the vertical position as needed */
+    top: 60px; /* Adjust the vertical position as needed */
     right: 50px; /* Adjust the horizontal position as needed */
 }
 
