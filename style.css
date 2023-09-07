@@ -5,8 +5,9 @@ html {
 
 body {
     background: rgb(255, 255, 255);
-    min-height: 100vh;
+    height: 100%;
     max-width: 100vh;
+    margin: 0%;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -152,3 +153,20 @@ header {
         justify-content: space-between;
     }
 }
+
+/* Center the container */
+.saltbag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Adjust this to control the centered area's height */
+}
+
+/* Center the image */
+#salt-bag {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    max-height: 100%; /* Ensure the image doesn't exceed its container's height */
+}
+
