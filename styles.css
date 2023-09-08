@@ -56,33 +56,38 @@ html, body {
   top: -9999px;
 }
 
+/* ... (previous CSS code) ... */
+
 .menu-button {
-    background-color: #fff;
-    position: relative;
-    height: 4px;
-    width: 30px;
-    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    border-radius: 2px;
-    
-    &::before, &::after {
-        content: '';
-        display: block;
-        background-color: #fff;
-        position: absolute;
-        height: 4px;
-        width: 30px;
-        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-        border-radius: 2px;
-    }
-    
-    &::before {
-        margin-top: -8px;
-    }
-    
-    &::after {
-        margin-top: 8px;
-    }
+  background-color: #fff;
+  position: relative;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+  
+  &::before, &::after {
+      content: '';
+      display: block;
+      background-color: #fff;
+      position: absolute;
+      height: 4px;
+      width: 30px;
+      transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      border-radius: 2px;
+  }
+  
+  &::before {
+      margin-top: -8px;
+  }
+  
+  &::after {
+      margin-top: 8px;
+  }
 }
+
+/* ... (rest of your CSS) ... */
+
 
 #menu-toggle:checked + .menu-button-container .menu-button {
     transform: rotate(45deg);
