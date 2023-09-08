@@ -39,16 +39,23 @@
         // Select the menu toggle and dropdown menu elements
         const menuToggle = document.getElementById("menu-toggle");
         const dropdownMenu = document.getElementById("dropdown-menu");
-    
+
         // Add a click event listener to the menu toggle
         menuToggle.addEventListener("click", () => {
-            // Toggle the visibility of the dropdown menu
+        // Toggle the visibility of the dropdown menu
             if (dropdownMenu.style.display === "block") {
                 dropdownMenu.style.display = "none";
             } else {
                 dropdownMenu.style.display = "block";
             }
         });
-    </script>    
+
+        // Add a click event listener to the document to hide the dropdown when clicking outside
+        document.addEventListener("click", (event) => {
+            if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
