@@ -72,6 +72,12 @@ header {
     display: block;
 }
 
+.dropdown-menu ul li a:hover {
+    text-decoration: none;
+    color: rgb(140, 191, 239);
+    display: block;
+}
+
 /* Show/hide the hamburger menu toggle on small screens */
 @media screen and (max-width: 768px) {
     .menu-toggle {
