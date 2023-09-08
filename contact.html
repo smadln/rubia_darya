@@ -28,12 +28,6 @@
                         <li><a href="#">Upcoming</a></li>
                     </ul>
                 </div>
-                <!-- Add an additional class "close" to the menu toggle -->
-                <div class="menu-toggle close" id="menu-toggle">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
             </div>
         </div>
     </header>
@@ -45,20 +39,17 @@
         // Select the menu toggle and dropdown menu elements
         const menuToggle = document.getElementById("menu-toggle");
         const dropdownMenu = document.getElementById("dropdown-menu");
+
         // Add a click event listener to the menu toggle
         menuToggle.addEventListener("click", () => {
         // Toggle the visibility of the dropdown menu
             if (dropdownMenu.style.display === "block") {
                 dropdownMenu.style.display = "none";
-                // Remove the "close" class to revert to three bars
-                menuToggle.classList.remove("close");
-            } 
-            else {
+            } else {
                 dropdownMenu.style.display = "block";
-                // Add the "close" class to transform into an 'X'
-                menuToggle.classList.add("close");
             }
         });
+
         // Add a click event listener to the document to hide the dropdown when clicking outside
         document.addEventListener("click", (event) => {
             if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
@@ -68,3 +59,4 @@
     </script>
 </body>
 </html>
+
