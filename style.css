@@ -44,6 +44,22 @@ header {
     margin: 3px 0;
 }
 
+/* Hide the "close" class initially */
+.menu-toggle .bar:nth-child(2),
+.menu-toggle .bar:nth-child(3) {
+    display: none;
+}
+
+/* Add styles for the "close" class */
+.menu-toggle.close .bar:first-child {
+    transform: rotate(-45deg) translate(-2px, 5px);
+}
+
+.menu-toggle.close .bar:last-child {
+    transform: rotate(45deg) translate(-2px, -5px);
+}
+
+
 /* Style the dropdown menu */
 .dropdown-menu {
     display: none;
