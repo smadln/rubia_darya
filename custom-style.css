@@ -8,16 +8,6 @@ body{
       -moz-osx-font-smoothing: grayscale;
 }
 
-header{
-    width:100%; 
-    background:#ffffff; 
-    height:60px; 
-    line-height:60px;
-    border-bottom:1px solid #dddddd;
-    color:rgb(145, 0, 0);
-    text-decoration: none;
-}
-
 .name {
     color:rgb(145, 0, 0);
     text-decoration: none;
