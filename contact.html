@@ -13,12 +13,12 @@
                 <h1>Rubia <br>Darya <br>Gallery</h1>
             </div>
             <div class="navbar-right">
-                <div class="menu-toggle">
+                <div class="menu-toggle" id="menu-toggle">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
                 </div>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu" id="dropdown-menu">
                     <ul>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Gallery</a></li>
@@ -35,5 +35,20 @@
     <div class="centered-content">  
         <img src="salt_bag.png" alt="Salt Bag" id="salt-bag">
     </div>
+    <script>
+        // Select the menu toggle and dropdown menu elements
+        const menuToggle = document.getElementById("menu-toggle");
+        const dropdownMenu = document.getElementById("dropdown-menu");
+    
+        // Add a click event listener to the menu toggle
+        menuToggle.addEventListener("click", () => {
+            // Toggle the visibility of the dropdown menu
+            if (dropdownMenu.style.display === "block") {
+                dropdownMenu.style.display = "none";
+            } else {
+                dropdownMenu.style.display = "block";
+            }
+        });
+    </script>    
 </body>
 </html>
