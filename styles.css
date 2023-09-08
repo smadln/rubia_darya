@@ -51,7 +51,9 @@ html, body {
 }
 
 #menu-toggle {
-    display: none;
+  opacity: 0;
+  position: absolute;
+  top: -9999px;
 }
 
 .menu-button {
@@ -106,7 +108,7 @@ html, body {
     transform: rotate(-405deg);
 }
 
-@media (max-width: 700px) {
+@media {
     .menu-button-container {
         display: flex;
     }
