@@ -72,11 +72,6 @@ header {
     display: block;
 }
 
-/* Show/hide the dropdown menu on hover */
-.navbar-right:hover .dropdown-menu {
-    display: block;
-}
-
 /* Show/hide the hamburger menu toggle on small screens */
 @media screen and (max-width: 768px) {
     .menu-toggle {
