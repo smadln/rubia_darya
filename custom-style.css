@@ -50,7 +50,7 @@ body{
 .menu li {display: block; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
 .menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
 .menu ul li a { text-decoration:none;  margin: 0px; color:rgb(145, 0, 0);}
-.menu ul li a:hover {  color: #666; text-decoration:none;}
+.menu ul li a:hover {color: #666666; text-decoration:none;}
 .menu a{text-decoration:none; color:rgb(145, 0, 0);}
 .menu a:hover{text-decoration:none; color: rgb(140, 191, 239);}
   
@@ -85,6 +85,11 @@ span{padding-left:20px;}
 
 a {
     color:rgb(145, 0, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    color:rgb(140, 191, 239);
     text-decoration: none;
 }
 
