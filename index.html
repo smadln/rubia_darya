@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,33 +9,48 @@
     <meta http-equiv='pragma' content='no-cache'>
     <title>Rubia Darya Gallery</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .content {
-            text-align: right;
-            margin-top: 0%;
-            margin-right: -85vmin;
-            margin-left: 0%;
-        }
-    </style>
- </head> 
- <body>
-    <div class="container" id="container">
-        <p class="name">
-            Rubia <br>Darya <br>Gallery</p>
-        <div class="content">
-            <a href="./about.html">about</a>
-            <br><a href="./gallery.html">gallery</a>
-            <br><a href="./contact.html">contact</a>
-            <br><a href="./upcoming.html">upcoming</a>
-            <br><a href="./newsletter.html">newsletter</a>
-        <div class="image">  
-            <img 
-            src="salt_bag.png"
-            alt="Salt Bag" 
-            id="saltbag"
-            >
-        </div>
-        </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <p class="name"><a href="./index.html" target="_blank">
+            Rubia <br>Darya <br>Gallery</a></p>
+        <button class="hamburger">&#9776;</button>
+        <button class="cross">&#735;</button>
+    </header>
+  
+    <div class="menu">
+        <ul>
+        <a href="./about.html"><li>About</li></a>
+        <a href="./gallery.html"><li>Gallery</li></a>
+        <a href="./contact.html"><li>Contact</li></a>
+        <a href="./upcoming.html"><li>Location</li></a>
+        <a href="./newsletter.html"><li>Newsletter</li></a>
+        </ul>
     </div> 
- </body>
+    <div class="centered-content">  
+        <img src="salt_bag.png" alt="Salt Bag" id="salt-bag">
+    </div>
+    <script>
+    $(document).ready(function() {
+
+    $(".cross").hide();
+    $(".menu").hide();
+    $(".hamburger").click(function() {
+        $(".menu").slideToggle("fast", function() {
+            $(".hamburger").hide();
+            $(".cross").show();
+        });
+    });
+    
+    $(".cross").click(function() {
+        $(".menu").slideToggle("slow", function() {
+            $(".cross").hide();
+            $(".hamburger").show();
+        });
+    });
+    
+    });
+    </script>
+</body>
 </html>
