@@ -16,7 +16,7 @@ body{
 .hamburger{
     background:none;
     position:absolute;
-    top: 60px;
+    top: 40px;
     right: 50px;
     line-height:45px;
     padding:5px 15px 0px 15px;
@@ -31,7 +31,7 @@ body{
 .cross{
     background:none;
     position:absolute;
-    top:60px;
+    top: 40px;
     right: 55px;
     padding:7px 15px 0px 15px;
     color:rgb(140, 191, 239);
