@@ -64,6 +64,7 @@ body{
     display: flex; /* Use flexbox */
     justify-content: flex-end; /* Align text to the right */
     border-bottom: transparent 1px solid;
+    line-height: 2;
 }
 
 .menu li a {
