@@ -18,38 +18,42 @@
         <button class="hamburger">&#9776;</button>
         <button class="cross">&#735;</button>
     </header>
-  
     <div class="menu">
         <ul>
-        <a href="./about.html"><li>About</li></a>
-        <a href="./gallery.html"><li>Gallery</li></a>
-        <a href="./contact.html"><li>Contact</li></a>
-        <a href="./upcoming.html"><li>Location</li></a>
-        <a href="./newsletter.html"><li>Newsletter</li></a>
+            <li class="menu-item"><a href="./about.html">About</a></li>
+            <li class="menu-item"><a href="./gallery.html">Gallery</a></li>
+            <li class="menu-item"><a href="./contact.html">Contact</a></li>
+            <li class="menu-item"><a href="./upcoming.html">Location</a></li>
+            <li class="menu-item"><a href="./newsletter.html">Newsletter</a></li>
         </ul>
-    </div> 
+    </div>    
     <div class="centered-content">  
         <img src="salt_bag.png" alt="Salt Bag" id="salt-bag">
     </div>
     <script>
     $(document).ready(function() {
 
-    $(".cross").hide();
-    $(".menu").hide();
-    $(".hamburger").click(function() {
-        $(".menu").slideToggle("fast", function() {
-            $(".hamburger").hide();
-            $(".cross").show();
+        $(".cross").hide();
+        $(".menu").hide();
+        $(".hamburger").click(function() {
+            $(".menu").slideToggle("fast", function() {
+                $(".hamburger").hide();
+                $(".cross").show();
+            // Iterate through each menu item and apply animation
+                $(".menu-item").each(function(index) {
+                    $(this).delay(100 * index).fadeIn(50); // Adjust the delay and fadeIn speed as needed
+                });
+            });
         });
-    });
     
-    $(".cross").click(function() {
-        $(".menu").slideToggle("slow", function() {
-            $(".cross").hide();
-            $(".hamburger").show();
+        $(".cross").click(function() {
+            $(".menu-item").fadeOut(300, function() {
+                $(".menu").slideToggle("fast", function() {
+                    $(".cross").hide();
+                    $(".hamburger").show();
+                });
+            });
         });
-    });
-    
     });
     </script>
 </body>
