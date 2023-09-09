@@ -34,7 +34,7 @@ body{
     top:0px;
     right:0;
     padding:7px 15px 0px 15px;
-    color:rgb(145, 0, 0);;
+    color:rgb(145, 0, 0);
     border:0;
     font-size:3em;
     line-height:65px;
@@ -47,9 +47,9 @@ body{
 .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
 .menu li {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
 .menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
-.menu ul li a { text-decoration:none;  margin: 0px; color:#666;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:rgb(145, 0, 0);}
 .menu ul li a:hover {  color: #666; text-decoration:none;}
-.menu a{text-decoration:none; color:#666;}
+.menu a{text-decoration:none; color:rgb(145, 0, 0);}
 .menu a:hover{text-decoration:none; color: rgb(140, 191, 239);}
   
 .glyphicon-home{
