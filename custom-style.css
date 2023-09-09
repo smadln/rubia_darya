@@ -28,6 +28,11 @@ body{
     outline:none;
     z-index:10000000000000;
 }
+
+.hamburger:hover {
+    color: rgb(140, 191, 239);
+}
+
 .cross{
     background:none;
     position:absolute;
