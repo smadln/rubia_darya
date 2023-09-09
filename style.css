@@ -49,7 +49,7 @@ body{
     outline:none;
     z-index:10000000000000;
 }
-.menu {z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:transparent;  
+.menu {z-index:1000000; font-weight:bold; font-size:0.8em; width: 0; background:transparent;  
     position:absolute; text-align:right; font-size:14px; top: 40px; /* Adjust the top value as needed */
 }
 .menu ul {margin: 40px; padding: 0; list-style-type: none; list-style-image: none;}
