@@ -53,13 +53,36 @@ body{
     position:absolute; text-align:right; font-size:14px; right: 120px; top: 40px;
     padding:7px 15px 0px 15px; /* Adjust the top value as needed */
 }
-.menu ul {margin: 40px; padding: 0; list-style-type: none; list-style-image: none;}
-.menu li {display: block; padding: 15px 0 15px 0; border-bottom:transparent 1px solid;}
-.menu li:hover{display: block; background:transparent; padding:15px 0 15px 0; border-bottom:transparent 1px solid;}
-.menu ul li a { text-decoration:none;  margin: 0px; color:rgb(145, 0, 0);}
-.menu ul li a:hover {color: #666666; text-decoration:none;}
-.menu a{text-decoration:none; color:rgb(145, 0, 0);}
-.menu a:hover{text-decoration:none; color: rgb(140, 191, 239);}
+.menu ul {
+    margin: 40px;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+}
+
+.menu li {
+    display: flex; /* Use flexbox */
+    justify-content: flex-end; /* Align text to the right */
+    border-bottom: transparent 1px solid;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(145, 0, 0);
+    pointer-events: none;
+}
+
+.menu li a span {
+    pointer-events: auto;
+    padding: 15px 0;
+}
+
+.menu li a:hover {
+    background: transparent;
+    color: #666666;
+}
+
   
 .glyphicon-home{
     color:white; 
