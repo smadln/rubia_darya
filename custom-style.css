@@ -64,7 +64,22 @@ header{
     font-size:16px;
     color:rgb(145, 0, 0);
     text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3.5vmin;
+    margin-left: 2.5vmin;
+    margin-right: 0;
+    margin-bottom: 0px;
+    text-align: left;
+    color: rgb(145, 0, 0); /* Text color of the title */
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
 }
+
 span{padding-left:20px;}
 
 a {
