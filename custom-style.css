@@ -23,7 +23,7 @@ body{
     color:rgb(145, 0, 0);;
     border:0;
     font-size:2em;
-    font-weight:bold;
+    font-weight: 400;
     cursor:pointer;
     outline:none;
     z-index:10000000000000;
@@ -38,7 +38,7 @@ body{
     border:0;
     font-size:3em;
     line-height:65px;
-    font-weight:bold;
+    font-weight: 400;
     cursor:pointer;
     outline:none;
     z-index:10000000000000;
