@@ -70,6 +70,13 @@ body{
 .menu-item li a span {
     pointer-events: auto;
     padding: 15px 0;
+    white-space: nowrap; /* Add this line to prevent line breaks */
+}
+
+.menu li a span {
+    pointer-events: auto;
+    padding: 15px 0;
+    white-space: nowrap; /* Add this line to prevent line breaks */
 }
 
 .menu li a:hover {
