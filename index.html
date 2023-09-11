@@ -32,13 +32,14 @@
     </div>
     <script>
     $(document).ready(function() {
-
         $(".cross").hide();
         $(".menu").hide();
+
         $(".hamburger").click(function() {
             $(".menu").slideToggle("fast", function() {
                 $(".hamburger").hide();
                 $(".cross").show();
+
             // Iterate through each menu item and apply animation
                 $(".menu-item").each(function(index) {
                     $(this).delay(50 * index).fadeIn(50); // Adjust the delay and fadeIn speed as needed
@@ -47,12 +48,23 @@
         });
     
         $(".cross").click(function() {
-            $(".menu-item").fadeOut(300, function() {
-                $(".menu").slideToggle("fast", function() {
-                    $(".cross").hide();
-                    $(".hamburger").show();
-                });
-            });
+            // Create a function to handle menu item disappearance
+            function hideMenuItem(index) {
+                if (index < 0) {
+                    // All items are hidden, close the menu
+                    $(".menu").slideToggle("slow", function() {
+                        $(".cross").hide();
+                        $(".hamburger").show();
+                    });
+                } else {
+                    // Hide the menu item with delay and call the next item to hide
+                    $(".menu-item").eq(index).fadeOut(300, function() {
+                        hideMenuItem(index - 1);
+                    });
+                }
+            }
+            // Start hiding menu items in reverse order
+            hideMenuItem($(".menu-item").length - 1);
         });
     });
     </script>
