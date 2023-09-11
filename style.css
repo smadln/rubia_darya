@@ -67,13 +67,6 @@ body{
     line-height: 2;
 }
 
-.menu li a {
-    display: block;
-    text-decoration: none;
-    color: rgb(145, 0, 0);
-    pointer-events: none;
-}
-
 .menu li a span {
     pointer-events: auto;
     padding: 15px 0;
@@ -81,10 +74,9 @@ body{
 
 .menu li a:hover {
     background: transparent;
-    color: #666666;
+    color:rgb(140, 191, 239);
 }
 
-  
 .glyphicon-home{
     color:white; 
     font-size:1.5em; 
