@@ -8,6 +8,49 @@
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
     <title>Rubia Darya Gallery</title>
+    <style>
+        .about {
+            display:inline-block; 
+            color:rgb(145, 0, 0);
+            text-decoration: none;
+            background-color: rgb(255, 255, 255);
+            padding: 0px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 3.5vmin;
+            margin-left: 2.5vmin;
+            margin-right: 0;
+            margin-bottom: 0px;
+            text-align: left;
+            color: rgb(145, 0, 0); /* Text color of the title */
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 550;
+        }
+
+        span {
+            padding-left:20px;
+        }
+
+        .statement {
+            color:rgb(89, 82, 82);
+            text-decoration: none;
+            background-color: rgb(255, 255, 255);
+            padding-left:20px;
+            padding-right: 80vh;
+            margin-top: 5vmin;
+            margin-left: 2.5vmin;
+            margin-right: 0;
+            margin-bottom: 0px;
+            text-align: left;
+            align-items: right;
+            font-size: 17px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 550;
+            justify-content: space-between;
+        }
+    </style>    
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -28,9 +71,8 @@
         <a href="./newsletter.html"><li>Newsletter</li></a>
         </ul>
     </div> 
-    <div class="About">
-        <p>About</p>
-     <div class="statement">
+    <p class="about">About</p>
+    <div class="statement">
         <p>At Rubia Darya we offer handwoven vintage and antique wool rugs and textiles. 
         Every piece has a story to tell of the women who wove them and of their nomadic families from central and west Asia.
         </p>
@@ -45,27 +87,45 @@
         <p>Rubia Darya also hosts special events to highlight the history and traditions of 
         tribal weaving in central and west Asia.  Please watch for posted events on our Instagram: @rubiadarya
         </p>    
-     </div>
+    </div>
     <script>
     $(document).ready(function() {
-
-    $(".cross").hide();
-    $(".menu").hide();
-    $(".hamburger").click(function() {
-        $(".menu").slideToggle("fast", function() {
-            $(".hamburger").hide();
-            $(".cross").show();
-        });
-    });
+        $(".cross").hide();
+        $(".menu").hide();
     
-    $(".cross").click(function() {
-        $(".menu").slideToggle("slow", function() {
-            $(".cross").hide();
-            $(".hamburger").show();
-        });
-    });
+        $(".hamburger").click(function() {
+            $(".menu").slideToggle("fast", function() {
+                $(".hamburger").hide();
+                $(".cross").show();
     
+                // Iterate through each menu item and apply animation
+                $(".menu-item").each(function(index) {
+                    $(this).delay(50 * index).fadeIn(50); // Adjust the delay and fadeIn speed as needed
+                });
+            });
+        });
+        
+        $(".cross").click(function() {
+            // Create a function to handle menu item disappearance
+            function hideMenuItem(index) {
+                if (index < 0) {
+                    // All items are hidden, close the menu
+                    $(".menu").slideToggle("fast", function() {
+                        $(".cross").hide();
+                        $(".hamburger").show();
+                    });
+                } else {
+                    // Hide the menu item with delay and call the next item to hide
+                    $(".menu-item").eq(index).fadeOut(80, function() {
+                        hideMenuItem(index - 1);
+                    });
+                }
+            }
+            // Start hiding menu items in reverse order
+            hideMenuItem($(".menu-item").length - 1);
+        });
     });
     </script>
-</body>
+ </body>
 </html>
+    
