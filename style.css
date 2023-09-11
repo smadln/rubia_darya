@@ -67,7 +67,7 @@ body{
     line-height: 2;
 }
 
-.menu li a span {
+.menu-item li a span {
     pointer-events: auto;
     padding: 15px 0;
 }
