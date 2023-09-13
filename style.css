@@ -138,8 +138,8 @@ a:hover {
     max-height: 100%; /* Ensure the image doesn't exceed its container's height */
 }
 
-#caucasian {
-    width: 500px; /* Set the fixed width of the image */
+#kurdish-bag {
+    width: 400px; /* Set the fixed width of the image */
     height: auto; /* Maintain the image's aspect ratio */
     max-width: 100%; /* Ensure the image doesn't exceed its container's width */
     max-height: 100%; /
