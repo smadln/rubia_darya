@@ -139,7 +139,10 @@ a:hover {
 }
 
 .kurdish-bag {
-    
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically in the viewport */
 }
 
 #kurdish-bag {
