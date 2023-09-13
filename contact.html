@@ -32,24 +32,37 @@
         span {
             padding-left:20px;
         }
-
+        
+        .container {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
         .statement {
             color:rgb(89, 82, 82);
             text-decoration: none;
             background-color: rgb(255, 255, 255);
-            padding-left:20px;
-            padding-right: 80vh;
-            margin-top: 5vmin;
-            margin-left: 2.5vmin;
+            padding-left:0px;
+            padding-right: 40px;
+            margin-top: 0px;
+            margin-left: 0vmin;
             margin-right: 0;
-            margin-bottom: 0px;
+            margin-bottom: 50vmin;
             text-align: left;
             align-items: right;
             font-size: 17px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-weight: 550;
             justify-content: space-between;
+            float: text;
         }
+        
+        img {
+            padding-left:40px;
+            max-width: 40%;
+            float: center;
+        }
+
     </style>    
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -72,16 +85,18 @@
         </ul>
     </div>    
     <p class="title">Contact</p>
-    <div class="statement">
-        <p>Phone: (204) 223-5177;  (431) 388-8282
-        </p>
-        <p>Email: rubiadarya@mymts.net
-        </p>    
-        <p>Find us on Instagram <a href="https://www.instagram.com/rubiadarya/">@rubiadarya</a> for updates.</p> 
-    </div>
-    <div class="kurdish-bag">
-        <img src="kurd_salt_bag.png" alt="Kurdish bag" id="kurdish-bag">  
+    <div class="container">
+        <div class="statement">
+            <p>Phone: (204) 223-5177;  (431) 388-8282
+            </p>
+            <p>Email: rubiadarya@mymts.net
+            </p>    
+            <p>Find us on Instagram <a href="https://www.instagram.com/rubiadarya/">@rubiadarya</a> for updates.</p> 
         </div>
+        <div class="image">
+            <img src="kurd_salt_bag.png" alt="Kurdish bag" id="kurdish-bag">  
+        </div>
+    </div>
     <script>
     $(document).ready(function() {
         $(".cross").hide();
