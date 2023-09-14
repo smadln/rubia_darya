@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Noto Sans', sans-serif;
     margin:0;
     width:100%;
@@ -35,7 +35,7 @@ body{
     color: #b3d4ff;
 }
 
-.cross{
+.cross {
     background:transparent;
     position:absolute;
     top: 30px;
@@ -86,14 +86,14 @@ body{
     color: #b3d4ff;
 }
 
-.glyphicon-home{
+.glyphicon-home {
     color: transparent; 
     font-size:1.5em; 
     margin-top:5px; 
     margin:0 auto;
 }
   
-header{
+header {
     display:inline-block; 
     color:rgb(145, 0, 0);
     text-decoration: none;
@@ -113,7 +113,7 @@ header{
     font-weight: 550;
 }
 
-span{
+span {
     padding-left:20px;
 }
 
