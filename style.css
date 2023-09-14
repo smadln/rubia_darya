@@ -31,7 +31,7 @@ body{
 }
 
 .hamburger:hover {
-    color: #b2c7ff;
+    color: #b3d4ff;
 }
 
 .cross{
@@ -40,7 +40,7 @@ body{
     top: 30px;
     right: 35px;
     padding:7px 15px 0px 15px;
-    color: #b2c7ff;
+    color: #b3d4ff;
     border:0;
     font-size:3em;
     line-height:65px;
@@ -81,7 +81,7 @@ body{
 
 .menu li a:hover {
     background: transparent;
-    color: #b2c7ff;
+    color: #b3d4ff;
 }
 
 .glyphicon-home{
@@ -119,7 +119,7 @@ a {
 }
 
 a:hover {
-    color: #b2c7ff;
+    color: #b3d4ff;
     text-decoration: none;
 }
 
