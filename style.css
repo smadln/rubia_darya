@@ -12,7 +12,7 @@ body {
     background-repeat: no-repeat;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: linear-gradient(blue, 10%, rgb(255, 255, 255)) no-repeat fixed 0 0 transparent;
+    background: linear-gradient(blue, 0.5%, rgb(255, 255, 255)) no-repeat fixed 0 0 transparent;
 }
 
 .name {
