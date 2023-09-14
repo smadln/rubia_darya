@@ -12,6 +12,7 @@ body{
     color:rgb(145, 0, 0);
     text-decoration: none;
     margin-top: 10px; /* Adjust the value as needed to move the text up */
+    
 }
 
 .hamburger{
@@ -95,7 +96,7 @@ header{
     display:inline-block; 
     color:rgb(145, 0, 0);
     text-decoration: none;
-    background-color: rgb(255, 255, 255);
+    background: transparent;
     padding: 0px 20px;
     display: flex;
     justify-content: space-between;
