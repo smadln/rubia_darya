@@ -12,7 +12,7 @@ body {
     background-repeat: no-repeat;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: linear-gradient(rgb(29, 72, 214), 0.5%, rgb(255, 255, 255)) no-repeat fixed 0 0 transparent; 
+    background: linear-gradient(rgb(29, 72, 214), 0.5%, rgb(255, 255, 255), 90%, #ffff) no-repeat fixed 0 0 transparent; 
 }
 
 
