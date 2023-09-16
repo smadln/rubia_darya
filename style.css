@@ -20,7 +20,7 @@ body {
 .name {
     color:rgb(145, 0, 0);
     text-decoration: none;
-    margin-top: 10px; /* Adjust the value as needed to move the text up */
+    margin-top: 7px; /* Adjust the value as needed to move the text up */
     background: transparent;
     height: 100px;
     min-width: 100%;
@@ -156,9 +156,3 @@ a:hover {
     max-width: 100%; /* Ensure the image doesn't exceed its container's width */
     max-height: 100%; /* Ensure the image doesn't exceed its container's height */
 }
-
-#gradient {
-    height: 200px;
-    background-color: #cccccc;
-    background-image: linear-gradient(red, yellow);
-  }
