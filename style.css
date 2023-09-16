@@ -12,7 +12,8 @@ body {
     background-repeat: no-repeat;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: linear-gradient(rgb(29, 72, 214), 0.5%, rgb(255, 255, 255), 90%, #ffff) no-repeat fixed 0 0 transparent; 
+    background: linear-gradient(rgb(29, 72, 214), 0.5%, rgb(255, 255, 255), 95%, #ffff) no-repeat fixed 0 0 transparent; 
+    
 }
 
 
@@ -20,7 +21,7 @@ body {
     color:rgb(145, 0, 0);
     text-decoration: none;
     margin-top: 10px; /* Adjust the value as needed to move the text up */
-    
+    background: transparent;
     height: 100px;
     min-width: 100%;
     margin-right: 55vh;
