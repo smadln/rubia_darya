@@ -62,9 +62,9 @@ header {
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    background-color: #f0f0f0;
     height: 50px;
     min-width: 100%;
     margin-right: 55vh;
+    color:rgb(145, 0, 0);
     background-color: transparent;
   }
