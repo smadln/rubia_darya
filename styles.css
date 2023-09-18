@@ -2,12 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(#ddd4ca, 10%, rgb(255, 255, 255));;
   }
   
   nav {
     display: flex;
     justify-content: center;
-    background: linear-gradient(rgb(209, 209, 255), 10%, rgb(255, 255, 255));;
+    background: white;
   }
   
   nav ul {
