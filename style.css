@@ -62,8 +62,17 @@ body {
     outline:none;
     z-index:10000000000000;
 }
-.menu {z-index:1000000; font-weight:bold; font-size:0.8em; width: 0; background:transparent;  
-    position:absolute; text-align:right; font-size:14px; right: 70px; top: 40px;
+.menu {
+    z-index:1000000; 
+    font-weight: normal; 
+    font-size:0.8em; 
+    width: 0; 
+    background:transparent;  
+    position:absolute; 
+    text-align:right; 
+    font-size:14px; 
+    right: 70px; 
+    top: 40px;
     padding:7px 15px 0px 15px; /* Adjust the top value as needed */
 }
 .menu ul {
