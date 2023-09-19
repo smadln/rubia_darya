@@ -194,7 +194,8 @@ nav ul .dropdown li a {
 }
   
 nav ul .dropdown li a:hover {
-    color: rgb(255, 245, 111);
+    color: rgb(255, 255, 255);
+    background: #b3d4ff; 
 }
 
 .region {
