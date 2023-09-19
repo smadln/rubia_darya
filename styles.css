@@ -31,7 +31,7 @@ body {
   }
   
   nav ul li a:hover {
-    background-color: #ccc;
+    background-color: transparent;
     color: #b3d4ff;
   }
   
