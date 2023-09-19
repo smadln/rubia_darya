@@ -146,7 +146,7 @@ a:hover {
     align-items: center;
     height: 100vh; /* Center vertically in the viewport */
     background: transparent;
-    margin-top: -100px;
+    margin-top: -80px;
 }
 
 /* Center the image */
