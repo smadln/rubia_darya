@@ -146,11 +146,12 @@ a:hover {
     align-items: center;
     height: 100vh; /* Center vertically in the viewport */
     background: transparent;
+    margin-top: -100px;
 }
 
 /* Center the image */
 #salt-bag {
-    width: 450px; /* Set the fixed width of the image */
+    width: 550px; /* Set the fixed width of the image */
     height: auto; /* Maintain the image's aspect ratio */
     max-width: 100%; /* Ensure the image doesn't exceed its container's width */
     max-height: 100%; /* Ensure the image doesn't exceed its container's height */
