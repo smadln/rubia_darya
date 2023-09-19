@@ -193,6 +193,10 @@ nav ul .dropdown li a {
     text-decoration: none;
 }
   
-  nav ul .dropdown li a:hover {
+nav ul .dropdown li a:hover {
     color: #00f;
-  }
+}
+
+.region {
+    color: #00f;
+}
