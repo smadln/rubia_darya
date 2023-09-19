@@ -18,57 +18,57 @@ body {
     background: linear-gradient(#ddd4ca, 10%, #ffffff);
   }
   
-  nav {
+nav {
     display: flex;
     justify-content: center;
     background: transparent;
-  }
+}
   
-  nav ul {
+nav ul {
     display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
+}
   
-  nav ul li {
+nav ul li {
     margin: 0;
-  }
+}
   
-  nav ul li a {
+nav ul li a {
     color: #000;
     text-decoration: none;
     font-size: 14px;
     padding: 15px 60px; /* Adjust the padding to your preference */
     display: block;
-  }
+}
   
-  nav ul li a:hover {
+nav ul li a:hover {
     background-color: transparent;
     color: #b3d4ff;
-  }
+}
   
-  /* Styles for dropdown menu */
-  nav ul li:hover .dropdown {
+/* Styles for dropdown menu */
+nav ul li:hover .dropdown {
     display: block;
-  }
+}
   
-  nav ul .dropdown {
+nav ul .dropdown {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     padding: 10px;
-  }
+}
   
-  nav ul .dropdown li {
+nav ul .dropdown li {
     display: block;
     margin: 5px 0;
-  }
+}
   
-  nav ul .dropdown li a {
+nav ul .dropdown li a {
     color: #333;
     text-decoration: none;
-  }
+}
   
   nav ul .dropdown li a:hover {
     color: #00f;

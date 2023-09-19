@@ -166,32 +166,32 @@ a:hover {
     max-height: 100%; /* Ensure the image doesn't exceed its container's height */
 }
 
-.menu .gallery-menu .region-menu .dropdown {
+nav ul li:hover .dropdown {
     display: block;
+}
+  
+nav ul .dropdown {
+    display: none;
     position: absolute;
     background-color: #f9f9f9;
     padding: 10px;
-    left: 0; /* Adjust the left position to align with "Textiles" */
-    top: 100%; /* Position directly below "Textiles" */
+    margin: 20px;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+    background: transparent;
 }
   
-.menu .dropdown li {
+nav ul .dropdown li {
     display: block;
-    margin: 5px 10px;
+    margin: 5px 0;
 }
   
-.menu .dropdown li a {
+nav ul .dropdown li a {
     color: #333;
     text-decoration: none;
 }
   
-.menu .dropdown li a:hover {
+  nav ul .dropdown li a:hover {
     color: #00f;
-}
-
-.menu .menu-item {
-    display: flex;
-    align-items: center;
-}
-  
-  
+  }
