@@ -202,3 +202,15 @@ nav ul .dropdown li a:hover {
     text-decoration-color: #b3d4ff;
     background-color: transparent;
 }
+
+/* Add new hoverable class styling */
+.hoverable {
+    cursor: pointer;
+    color: rgb(145, 0, 0);
+}
+
+/* Add hover effect for hoverable class */
+.hoverable:hover {
+    color: #b3d4ff;
+}
+
