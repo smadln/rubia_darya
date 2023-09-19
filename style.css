@@ -166,35 +166,18 @@ a:hover {
     max-height: 100%; /* Ensure the image doesn't exceed its container's height */
 }
 
-.menu .gallery-menu:hover .dropdown {
-    display: block; /* Show the dropdown on hover */
-}
-  
 .menu .gallery-menu .region-menu .dropdown {
-    display: none;
+    display: block;
     position: absolute;
     background-color: #f9f9f9;
     padding: 10px;
-    left: 0; /* Position directly below "Textiles" */
-    top: 100%; /* Position below "Textiles" */
-}
-  
-.menu .gallery-menu .dropdown {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    padding: 10px;
-    left: 0; /* Position directly below "Textiles" */
-    top: 100%; /* Position below "Textiles" */
-}
-
-.menu .region-menu:hover .dropdown {
-    display: block; /* Show the dropdown on hover */
+    left: 0; /* Adjust the left position to align with "Textiles" */
+    top: 100%; /* Position directly below "Textiles" */
 }
   
 .menu .dropdown li {
     display: block;
-    margin: 5px 0;
+    margin: 5px 10px;
 }
   
 .menu .dropdown li a {
@@ -206,29 +189,9 @@ a:hover {
     color: #00f;
 }
 
-  /* Your existing CSS */
-
 .menu .menu-item {
     display: flex;
     align-items: center;
 }
   
-.menu .menu-separator {
-    margin: 0 5px; /* Adjust the margin as needed */
-}
-  
-.menu .region-menu .dropdown {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    padding: 10px;
-    right: -20px; /* Adjust this value to move it closer to the right */
-    top: -10px; /* Adjust this value to move it closer to the original dropdown */
-}
-  
-.menu .gallery-menu:hover .dropdown {
-  display: block; /* Show the dropdown on hover */
-}
-  
-
   
