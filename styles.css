@@ -25,6 +25,7 @@ body {
   nav ul li a {
     color: #000;
     text-decoration: none;
+    font-size: 12px;
     padding: 15px 50px; /* Adjust the padding to your preference */
     display: block;
   }
