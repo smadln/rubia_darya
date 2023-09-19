@@ -26,12 +26,13 @@ body {
     color: #000;
     text-decoration: none;
     font-size: 12px;
-    padding: 15px 50px; /* Adjust the padding to your preference */
+    padding: 15px 60px; /* Adjust the padding to your preference */
     display: block;
   }
   
   nav ul li a:hover {
     background-color: #ccc;
+    color: #b3d4ff;
   }
   
   /* Styles for dropdown menu */
