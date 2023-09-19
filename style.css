@@ -180,6 +180,7 @@ nav ul .dropdown {
     list-style-type: none;
     list-style-image: none;
     background: transparent;
+    right: -7vmin; 
 }
   
 nav ul .dropdown li {
