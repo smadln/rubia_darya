@@ -230,10 +230,10 @@ a:hover {
     top: -10px; /* Adjust this value to move it closer to the original dropdown */
   }
   
-  .menu .gallery-menu:hover .dropdown,
-  .menu .gallery-menu:hover + .menu-separator + .region-menu .dropdown {
-    display: block; /* Show the dropdown on hover */
-  }
+.menu .gallery-menu:hover .dropdown,
+.menu .separator-menu:hover + .gallery-menu .dropdown {
+  display: block; /* Show the dropdown on hover */
+}
   
   /* Rest of your CSS remains unchanged */
   
