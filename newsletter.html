@@ -27,5 +27,35 @@
         <img src="salt_bag.png" alt="Salt Bag" id="salt-bag">
     </div>
 </body>
+<script>
+    $(document).ready(function() {
+
+    $(".cross").hide();
+    $(".menu").hide();
+    $(".hamburger").click(function() {
+        $(".menu").slideToggle("fast", function() {
+            $(".hamburger").hide();
+            $(".cross").show();
+        });
+    });
+
+    $(".cross").click(function() {
+        $(".menu").slideToggle("slow", function() {
+            $(".cross").hide();
+            $(".hamburger").show();
+        });
+    });
+
+    });
+    var url = window.location.href;
+    if (url.endsWith('index')) {
+        // Remove 'index' from the URL
+        var newUrl = url.substring(0, url.lastIndexOf('index'));
+        history.replaceState({}, '', newUrl);
+    } else if (url.endsWith('.html')) {
+        // Remove '.html' from the URL
+        history.replaceState({}, '', url.substring(0, url.length - 5));
+    }
+</script>
 </html>
 
