@@ -214,3 +214,42 @@ nav ul .dropdown li a:hover {
     color: #b3d4ff;
 }
 
+/* Existing CSS */
+
+/* ... */
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+    .statement {
+        padding-right: 20px;
+        font-size: 14px;
+    }
+
+    img {
+        padding-left: 20px;
+        max-width: 100%;
+    }
+
+    .menu {
+        right: 20px;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hamburger, .cross {
+        top: 10px;
+        right: 10px;
+    }
+
+    .menu ul {
+        margin: 20px;
+    }
+}
