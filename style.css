@@ -237,6 +237,7 @@ nav ul .dropdown li a:hover {
     .name {
         font-size: 16px;
         margin-right: 0;
+        margin-top: 15px; /* Adjust this value to vertically align with the hamburger */
     }
 
     header {
@@ -245,8 +246,9 @@ nav ul .dropdown li a:hover {
     }
 
     .hamburger, .cross {
-        top: 10px;
-        right: 10px;
+        position: fixed; /* This ensures it stays fixed on scroll for smaller screens */
+        top: 15px; /* Adjust this value to align it vertically with the .name text */
+        right: 10px; /* This will push it to the far right with a 10px gap */
     }
 
     .menu ul {
