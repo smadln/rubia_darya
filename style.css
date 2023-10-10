@@ -249,6 +249,14 @@ nav ul .dropdown li a:hover {
         position: fixed; /* This ensures it stays fixed on scroll for smaller screens */
         top: 15px; /* Adjust this value to align it vertically with the .name text */
         right: 10px; /* This will push it to the far right with a 10px gap */
+        font-size: 1.5em;
+    }
+
+    .cross {
+        position: fixed; /* This ensures it stays fixed on scroll for smaller screens */
+        top: 15px; /* Adjust this value to align it vertically with the .name text */
+        right: 10px; /* This will push it to the far right with a 10px gap */
+        font-size: 1.5em;
     }
 
     .menu ul {
