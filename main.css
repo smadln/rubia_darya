@@ -16,6 +16,64 @@ html, body {
     background-color: lightblue;
 }
 
+/* Use vh units for vertical positioning */
+.name {
+    position: absolute;
+    left: 2%; /* Adjust as needed */
+    color: rgb(255, 255, 110);
+    font-size: 18px;
+    font-family: Georgia, Tahoma, Verdana;
+}
+  
+.name {
+    top: 4vh; /* Use vh units for vertical positioning */
+}
+  
+.horizontal-list {
+    position: absolute;
+    top: 4.5vh; /* Use vh units for vertical positioning */
+    right: 1%; /* Adjust as needed */
+    display: flex;
+}
+  
+ /* Add some spacing between list items */
+.horizontal-list li {
+    margin-right: 10px;
+}
+  
+/* Style links */
+.horizontal-list li a {
+    font-size: 14px;
+    font-family: Georgia, Tahoma, Verdana;
+    color: grey;
+    text-decoration: none;
+}
+  
+.horizontal-list li a:hover {
+    color: rgb(143, 132, 227);
+}
+  
+/* For info page */
+
+.header {
+    top: 4vh; /* Use vh units for vertical positioning */
+}
+
+.header a {
+    position: absolute;
+    left: 2%; /* Adjust as needed */
+    color: rgb(255, 255, 110);
+    font-size: 18px;
+    font-family: Georgia, Tahoma, Verdana;
+}
+
+.header a:hover {
+    color: rgb(143, 132, 227);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Georgia, Tahoma, Verdana;
+}
+
 .webgl
 {
     position: fixed;
