@@ -16,7 +16,6 @@ html, body {
     background-color: lightblue;
 }
 
-
 .webgl
 {
     position: fixed;
@@ -44,7 +43,7 @@ form {
 }
 
 input[type="button"] {
-  color: black;
+  color: lightblue;
   margin: 6px;
 }
 
