@@ -58,7 +58,7 @@ let effect;
 
 let characters = ' .:-+*=%@#'
 const effectSize = { amount: .205 }
-let backgroundColor = 'black'
+let backgroundColor = 'lightblue'
 let ASCIIColor = 'white'
 
 function createEffect() {
@@ -218,9 +218,9 @@ function lightDark() {
     lightMode = !lightMode
     if (lightMode === true) {
         document.getElementById("kofi").style.color = "white";
-        document.body.style.backgroundColor = 'black';
+        document.body.style.backgroundColor = 'lightblue';
 
-        backgroundColor = 'black'
+        backgroundColor = 'lightblue'
         ASCIIColor = 'white'
 
         effect.domElement.style.color = ASCIIColor;
