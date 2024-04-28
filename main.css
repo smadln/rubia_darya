@@ -39,6 +39,7 @@ html, body {
  /* Add some spacing between list items */
 .horizontal-list li {
     margin-right: 10px;
+    list-style-type: none;
 }
   
 /* Style links */
@@ -46,7 +47,7 @@ html, body {
     font-size: 14px;
     font-family: Georgia, Tahoma, Verdana;
     color: grey;
-    text-decoration: none;
+    text-decoration: none; 
 }
   
 .horizontal-list li a:hover {
