@@ -84,17 +84,6 @@ html, body {
     background-color: lightblue;
 }
 
-form {
-    
-    font-family: 'Courier New';
-    /* position: absolute; */
-    display: block;
-    color: whitesmoke;
-    /* z-index: 99; */
-    left: 0%;
-    top: 0%;
-    }
-
 #kofi {
     text-align: left;  
     position: fixed;
