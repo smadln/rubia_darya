@@ -109,7 +109,7 @@ function render() {
 function tick() {
     requestAnimationFrame(tick);
     if (rotateModel) {
-        myMesh.rotation.y += 0.01; // Adjust the rotation speed as needed
+        myMesh.rotation.y += 0.1; // Adjust the rotation speed as needed
     }
     render();
 }
