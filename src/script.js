@@ -12,7 +12,7 @@ let lightMode = true
 const clock = new THREE.Clock()
 
 // Set rotate boolean variable
-let rotateModel = true
+let rotateModel = false
 
 //Ugh, don't ask about this stuff
 var userUploaded = false
@@ -58,7 +58,7 @@ let effect;
 
 let characters = ' .:-+*=%@#'
 const effectSize = { amount: .205 }
-let backgroundColor = 'lightblue'
+let backgroundColor = 'black'
 let ASCIIColor = 'white'
 
 function createEffect() {
@@ -75,7 +75,7 @@ document.body.appendChild(effect.domElement)
 document.getElementById("ascii").style.whiteSpace = "prewrap"
 
 stlLoader.load(
-    '3dpea copy.stl',
+    './models/test2.stl',
     function (geometry) {
 
         myMesh.material = material;
@@ -218,19 +218,19 @@ function lightDark() {
     lightMode = !lightMode
     if (lightMode === true) {
         document.getElementById("kofi").style.color = "white";
-        document.body.style.backgroundColor = 'lightblue';
+        document.body.style.backgroundColor = 'black';
 
-        backgroundColor = 'lightblue'
+        backgroundColor = 'black'
         ASCIIColor = 'white'
 
         effect.domElement.style.color = ASCIIColor;
         effect.domElement.style.backgroundColor = backgroundColor;
     } else {
-        document.getElementById("kofi").style.color = "white";
-        document.body.style.backgroundColor = 'lightblue';
+        document.getElementById("kofi").style.color = "black";
+        document.body.style.backgroundColor = 'white';
 
-        backgroundColor = 'lightblue'
-        ASCIIColor = 'white'
+        backgroundColor = 'white'
+        ASCIIColor = 'black'
 
         effect.domElement.style.color = ASCIIColor;
         effect.domElement.style.backgroundColor = backgroundColor;
