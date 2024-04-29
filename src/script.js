@@ -5,6 +5,12 @@ import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js'
 import { AsciiEffect } from 'three/examples/jsm/effects/AsciiEffect.js';
 import html2canvas from 'html2canvas';
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Code to trigger button click event
+    const screenshotButton = document.getElementById('screenshotButton');
+    screenshotButton.click();
+});
+
 // LightMode
 let lightMode = true
 
