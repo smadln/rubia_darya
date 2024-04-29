@@ -12,7 +12,7 @@ let lightMode = true
 const clock = new THREE.Clock()
 
 // Set rotate boolean variable
-let rotateModel = false
+let rotateModel = true
 
 //Ugh, don't ask about this stuff
 var userUploaded = false
