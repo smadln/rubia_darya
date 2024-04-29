@@ -100,17 +100,15 @@ stlLoader.load(
 
         controls = new OrbitControls(camera, effect.domElement)
 
-
         function tick() {
-            if (rotateModel == true) {
-                const elapsedTime = clock.getElapsedTime()
-                myMesh.rotation.z = (elapsedTime) / 3
-                render()
-                window.requestAnimationFrame(tick)
-            } else {
-                render()
-                window.requestAnimationFrame(tick)
+            if (rotateModel) { // Check if auto-rotation is enabled
+                const elapsedTime = clock.getElapsedTime();
+                myMesh.rotation.z = (elapsedTime) / 3; // Update rotation if enabled
             }
+            
+            render(); // Always render the scene
+            
+            window.requestAnimationFrame(tick); // Request the next frame
         }
 
         function render() {
