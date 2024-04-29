@@ -173,6 +173,12 @@ function takeScreenshot() {
     });
 }
 
+document.getElementById('rotateButton').addEventListener('click', rotateMode);
+
+function rotateMode() {
+    rotateModel = !rotateModel
+}
+
 function animate() {
     const elapsedTime = jo.getElapsedTime();
     
