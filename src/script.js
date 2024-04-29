@@ -276,3 +276,8 @@ document.getElementById("clipboardASCII").addEventListener("click", function () 
     document.body.removeChild(textArea);
     window.alert("ASCII copied to clipboard");
 }, false);
+
+function rotateMode() {
+    rotateModel = !rotateModel;
+    console.log('Rotate mode toggled. Current value: ', rotateModel);
+}
