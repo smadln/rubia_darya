@@ -53,7 +53,7 @@ const renderer = new THREE.WebGLRenderer()
 
 let effect;
 
-let characters = ' .:-+*=%@#'
+let characters = ' .:-+*=#'
 const effectSize = { amount: .205 }
 let backgroundColor = 'lightblue'
 let ASCIIColor = 'darkred'
