@@ -179,6 +179,16 @@ function rotateMode() {
     rotateModel = !rotateModel
 }
 
+function animate() {
+    if (!Zo) {
+        ea.rotation.y += 0.01;
+    }
+    const elapsedTime = jo.getElapsedTime();
+    ea.rotation.z = elapsedTime / 3;
+    ca.render(ta, oa);
+    window.requestAnimationFrame(animate);
+}
+
 document.getElementById('updateASCII').addEventListener('click', updateASCII);
 
 function updateASCII() {
