@@ -209,7 +209,7 @@ function resetASCII() {
 
     document.body.removeChild(effect.domElement)
 
-    characters = ' .:-+*=%@#'
+    characters = ' .:-+*=#'
 
     createEffect()
     onWindowResize()
