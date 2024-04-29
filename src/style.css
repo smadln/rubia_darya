@@ -16,8 +16,7 @@ html, body {
     background-color: lightblue;
 }
 
-.webgl
-{
+.webgl {
     position: fixed;
     top: 0;
     left: 0;
@@ -25,7 +24,6 @@ html, body {
 }
 
 form {
-    
     font-family: 'Courier New';
     /* position: absolute; */
     display: block;
