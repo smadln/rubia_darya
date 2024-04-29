@@ -174,15 +174,22 @@ function takeScreenshot() {
 }
 
 function animate() {
-    if (!Zo) {
-        ea.rotation.y += 0.01;
-    }
     const elapsedTime = jo.getElapsedTime();
-    ea.rotation.z = elapsedTime / 3;
-    ca.render(ta, oa);
+    
+    if (!Zo) {
+        // Apply auto-rotation
+        ea.rotation.z = elapsedTime / 3; // Adjust auto-rotation speed as needed
+    } else {
+        // Apply manual rotation
+        ea.rotation.y += 0.01; // Adjust manual rotation speed as needed
+    }
+    
+    // Render the scene
+    n();
     window.requestAnimationFrame(animate);
 }
 
+// Start the animation loop
 animate();
 
 document.getElementById('updateASCII').addEventListener('click', updateASCII);
