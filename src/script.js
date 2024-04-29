@@ -5,16 +5,16 @@ import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js'
 import { AsciiEffect } from 'three/examples/jsm/effects/AsciiEffect.js';
 import html2canvas from 'html2canvas';
 
-//LightMode
+// LightMode
 let lightMode = true
 
-//Create a clock for rotation
+// Create a clock for rotation
 const clock = new THREE.Clock()
 
 // Set rotate boolean variable
 let rotateModel = true
 
-//Ugh, don't ask about this stuff
+// Ugh, don't ask about this stuff
 var userUploaded = false
 let controls
 
@@ -25,7 +25,7 @@ const myMesh = new THREE.Mesh();
 const scene = new THREE.Scene()
 scene.background = new THREE.Color(0, 0, 0);
 
-//Lights
+// Lights
 const pointLight1 = new THREE.PointLight(0xffffff, 1);
 pointLight1.position.set(100, 100, 400);
 scene.add(pointLight1);
@@ -37,7 +37,7 @@ scene.add(pointLight2);
 // Parameters
 const stlLoader = new STLLoader()
 
-//Material
+// Material
 const material = new THREE.MeshStandardMaterial()
 material.flatShading = true
 material.side = THREE.DoubleSide;
@@ -107,11 +107,8 @@ stlLoader.load(
                 const elapsedTime = clock.getElapsedTime()
                 myMesh.rotation.z = (elapsedTime) / 3
                 render()
-                window.requestAnimationFrame(tick)
-            } else {
-                render()
-                window.requestAnimationFrame(tick)
             }
+            window.requestAnimationFrame(tick)
         }
 
         function render() {
@@ -169,10 +166,15 @@ function takeScreenshot() {
     });
 }
 
-document.getElementById('rotateButton').addEventListener('click', rotateMode);
+// Remove the click event listener for rotateButton
+// document.getElementById('rotateButton').addEventListener('click', rotateMode);
 
+// Instead, call rotateMode directly after a certain interval
+setInterval(rotateMode, 1000); // Adjust the interval as needed (1000 milliseconds = 1 second)
+
+// Adjust the rotateMode function to toggle the rotateModel variable
 function rotateMode() {
-    rotateModel = !rotateModel
+    rotateModel = !rotateModel;
 }
 
 document.getElementById('updateASCII').addEventListener('click', updateASCII);
@@ -251,7 +253,7 @@ function download(filename, text) {
     element.style.display = 'none';
     document.body.appendChild(element);
 
-    element.click();
+    element.click
 
     document.body.removeChild(element);
 }
