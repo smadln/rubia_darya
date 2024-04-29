@@ -55,7 +55,7 @@ let effect;
 let characters = ' .:-+*=#'
 const effectSize = { amount: .205 }
 let backgroundColor = 'lightblue'
-let ASCIIColor = 'red'
+let ASCIIColor = 'white'
 
 function createEffect() {
     effect = new AsciiEffect(renderer, characters, { invert: true, resolution: effectSize.amount });
