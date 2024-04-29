@@ -233,11 +233,11 @@ function lightDark() {
         effect.domElement.style.color = ASCIIColor;
         effect.domElement.style.backgroundColor = backgroundColor;
     } else {
-        document.getElementById("kofi").style.color = "black";
-        document.body.style.backgroundColor = 'darkred';
+        document.getElementById("kofi").style.color = "darkred";
+        document.body.style.backgroundColor = 'lightblue';
 
-        backgroundColor = 'darkred'
-        ASCIIColor = 'black'
+        backgroundColor = 'lightblue'
+        ASCIIColor = 'darkred'
 
         effect.domElement.style.color = ASCIIColor;
         effect.domElement.style.backgroundColor = backgroundColor;
