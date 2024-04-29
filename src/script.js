@@ -53,7 +53,7 @@ const renderer = new THREE.WebGLRenderer()
 
 let effect;
 
-let characters = ' .:-+*=#'
+let characters = ' .:-+*=%@#'
 const effectSize = { amount: .205 }
 let backgroundColor = 'lightblue'
 let ASCIIColor = 'darkred'
@@ -65,7 +65,9 @@ function createEffect() {
     effect.domElement.style.backgroundColor = backgroundColor;
 }
 
-createEffect()
+document.body.appendChild(renderer.domElement);
+
+createEffect();
 
 document.body.appendChild(effect.domElement)
 
@@ -97,7 +99,7 @@ stlLoader.load(
 
         scene.add(myMesh);
 
-        controls = new OrbitControls(camera, effect.domElement);
+        controls = new OrbitControls(camera, renderer.domElement);
 
         // Add event listeners for user interaction and window focus/blur events
         controls.addEventListener('change', function () {
@@ -113,13 +115,12 @@ stlLoader.load(
         });
         
         function render() {
-            effect.render(scene, camera);
+            renderer.render(scene, camera);
         }
 
         tick()
 
         document.getElementById('file-selector').addEventListener('change', openFile, false);
-
 
         function openFile(evt) {
             const fileObject = evt.target.files[0];
@@ -151,7 +152,6 @@ stlLoader.load(
         };
     }
 )
-
 
 document.getElementById('screenshotButton').addEventListener('click', takeScreenshot);
 
