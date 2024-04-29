@@ -173,10 +173,13 @@ function takeScreenshot() {
     });
 }
 
+// Set rotate boolean variable
+let rotateModel = true; // Set to true initially for auto-rotation to start
+
 document.getElementById('rotateButton').addEventListener('click', rotateMode);
 
 function rotateMode() {
-    rotateModel = !rotateModel
+    rotateModel = !rotateModel; // Toggle rotateModel between true and false
 }
 
 document.getElementById('updateASCII').addEventListener('click', updateASCII);
