@@ -1,6 +1,5 @@
 import './style.css'
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js'
 import { AsciiEffect } from 'three/examples/jsm/effects/AsciiEffect.js';
 import html2canvas from 'html2canvas';
@@ -13,7 +12,7 @@ const clock = new THREE.Clock()
 
 //Ugh, don't ask about this stuff
 var userUploaded = false
-let controls
+let rotateModel = true; // Set to true initially for auto-rotation to start
 
 // Creates empty mesh container
 const myMesh = new THREE.Mesh();
@@ -99,21 +98,6 @@ stlLoader.load(
 
         scene.add(myMesh);
 
-        controls = new OrbitControls(camera, renderer.domElement);
-
-        // Add event listeners for user interaction and window focus/blur events
-        controls.addEventListener('change', function () {
-            rotateModel = false; // Disable auto-rotation when user interacts with the model
-        });
-        
-        window.addEventListener('focus', function () {
-            rotateModel = true; // Enable auto-rotation when window is focused
-        });
-        
-        window.addEventListener('blur', function () {
-            rotateModel = false; // Disable auto-rotation when window loses focus
-        });
-
         tick();
     }
 )
@@ -146,21 +130,13 @@ function takeScreenshot() {
     });
 }
 
-// Set rotate boolean variable
-let rotateModel = true; // Set to true initially for auto-rotation to start
-
-// Event listener for user interaction with the model
-controls.addEventListener('change', function () {
-    rotateModel = false; // Disable auto-rotation when user interacts with the model
-});
-
 // Function to handle window focus/blur events to toggle auto-rotation
 window.addEventListener('focus', function () {
     rotateModel = true; // Enable auto-rotation when window is focused
 });
 
 window.addEventListener('blur', function () {
-    rotateModel = false;
+    rotateModel = false; // Disable auto-rotation when window loses focus
 });
 
 window.addEventListener('resize', onWindowResize);
