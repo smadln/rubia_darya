@@ -21,6 +21,25 @@
   <div class="box">
     <model-viewer src="3dpea copy.stl" camera-controls auto-rotate></model-viewer>
   </div>
+
+  <script>
+    // Get a reference to the <model-viewer> element
+    const modelViewer = document.getElementById('myModel');
+
+    // Function to start auto-rotation of the model
+    function startRotation() {
+      modelViewer.setAttribute('auto-rotate', 'true');
+    }
+
+    // Function to stop auto-rotation of the model
+    function stopRotation() {
+      modelViewer.setAttribute('auto-rotate', 'false');
+    }
+
+    // Example: Start auto-rotation when the page loads
+    window.onload = startRotation;
+  </script>
+  
     <form method="post" enctype="multipart/form-data" data-html2canvas-ignore="true">
       <div id="top">
         <script>
