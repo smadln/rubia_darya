@@ -58,7 +58,7 @@ let effect;
 
 let characters = ' .:-+*=%@#'
 const effectSize = { amount: .205 }
-let backgroundColor = 'black'
+let backgroundColor = 'lightblue'
 let ASCIIColor = 'white'
 
 function createEffect() {
@@ -75,7 +75,7 @@ document.body.appendChild(effect.domElement)
 document.getElementById("ascii").style.whiteSpace = "prewrap"
 
 stlLoader.load(
-    './models/test2.stl',
+    '3dpea copy.stl',
     function (geometry) {
 
         myMesh.material = material;
