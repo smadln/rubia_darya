@@ -180,16 +180,21 @@ function toggleRotation() {
 
 // Function to start auto-rotation
 function startRotation() {
-    // Continuous rotation logic goes here
-    // For example:
-    // setInterval or requestAnimationFrame to rotate the model
+    // Set the interval for rotation
+    rotationInterval = setInterval(rotateModelFunction, 100); // Adjust the interval as needed (100 milliseconds = 0.1 seconds)
+
+    // Define the function to rotate the model
+    function rotateModelFunction() {
+        const elapsedTime = clock.getElapsedTime();
+        myMesh.rotation.z = (elapsedTime) / 3; // Adjust the rotation speed as needed
+        render();
+    }
 }
 
 // Function to stop auto-rotation
 function stopRotation() {
-    // Stop rotation logic goes here
-    // For example:
-    // clearInterval or cancelAnimationFrame to stop the rotation
+    // Clear the interval to stop rotation
+    clearInterval(rotationInterval);
 }
 
 // Trigger the toggleRotation function when the page loads
