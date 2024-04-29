@@ -150,6 +150,7 @@ stlLoader.load(
     }
 )
 
+
 document.getElementById('screenshotButton').addEventListener('click', takeScreenshot);
 
 function takeScreenshot() {
