@@ -166,14 +166,38 @@ function takeScreenshot() {
     });
 }
 
-// Trigger the click event on the rotate button programmatically when the page loads
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('rotateButton').click();
-});
+// Function to toggle rotation state
+function toggleRotation() {
+    rotateModel = !rotateModel;
+    if (rotateModel) {
+        // If rotation is enabled, start auto-rotation
+        startRotation();
+    } else {
+        // If rotation is disabled, stop auto-rotation
+        stopRotation();
+    }
+}
+
+// Function to start auto-rotation
+function startRotation() {
+    // Continuous rotation logic goes here
+    // For example:
+    // setInterval or requestAnimationFrame to rotate the model
+}
+
+// Function to stop auto-rotation
+function stopRotation() {
+    // Stop rotation logic goes here
+    // For example:
+    // clearInterval or cancelAnimationFrame to stop the rotation
+}
+
+// Trigger the toggleRotation function when the page loads
+document.addEventListener('DOMContentLoaded', toggleRotation);
 
 // Adjust the rotateMode function to toggle the rotateModel variable
 function rotateMode() {
-    rotateModel = !rotateModel;
+    toggleRotation();
 }
 
 document.getElementById('updateASCII').addEventListener('click', updateASCII);
