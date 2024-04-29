@@ -12,7 +12,6 @@ const clock = new THREE.Clock()
 
 //Ugh, don't ask about this stuff
 var userUploaded = false
-let rotateModel = true; // Set to true initially for auto-rotation to start
 
 // Creates empty mesh container
 const myMesh = new THREE.Mesh();
@@ -130,38 +129,39 @@ function takeScreenshot() {
     });
 }
 
-document.getElementById('lightDark').addEventListener('click', lightDark);
+// Create a rotate button
+const rotateButton = document.createElement('button');
+rotateButton.textContent = 'Pause Rotation';
+document.body.appendChild(rotateButton);
 
-function lightDark() {
-    lightMode = !lightMode
-    if (lightMode === true) {
-        document.getElementById("kofi").style.color = "white";
-        document.body.style.backgroundColor = 'lightblue';
+// Set rotateModel to true by default
+let rotateModel = true;
 
-        backgroundColor = 'lightblue'
-        ASCIIColor = 'white'
-
-        effect.domElement.style.color = ASCIIColor;
-        effect.domElement.style.backgroundColor = backgroundColor;
+// Add event listener to toggle rotation on button click
+rotateButton.addEventListener('click', function() {
+    rotateModel = !rotateModel; // Toggle rotateModel
+    if (rotateModel) {
+        rotateButton.textContent = 'Pause Rotation';
     } else {
-        document.getElementById("kofi").style.color = "white";
-        document.body.style.backgroundColor = 'lightblue';
-
-        backgroundColor = 'lightblue'
-        ASCIIColor = 'white'
-
-        effect.domElement.style.color = ASCIIColor;
-        effect.domElement.style.backgroundColor = backgroundColor;
+        rotateButton.textContent = 'Resume Rotation';
     }
-}
-
-// Function to handle window focus/blur events to toggle auto-rotation
-window.addEventListener('focus', function () {
-    rotateModel = true; // Enable auto-rotation when window is focused
 });
 
-window.addEventListener('blur', function () {
+// Function to handle window focus/blur events to toggle auto-rotation
+window.addEventListener('focus', function() {
+    rotateModel = true; // Enable auto-rotation when window is focused
+    rotateButton.textContent = 'Pause Rotation'; // Update button text
+});
+
+window.addEventListener('blur', function() {
     rotateModel = false; // Disable auto-rotation when window loses focus
+    rotateButton.textContent = 'Resume Rotation'; // Update button text
+});
+
+// Event listener for user interaction with the model
+myMesh.addEventListener('pointerdown', function() {
+    rotateModel = false; // Disable auto-rotation when model is clicked/tapped
+    rotateButton.textContent = 'Resume Rotation'; // Update button text
 });
 
 window.addEventListener('resize', onWindowResize);
