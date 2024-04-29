@@ -130,6 +130,31 @@ function takeScreenshot() {
     });
 }
 
+document.getElementById('lightDark').addEventListener('click', lightDark);
+
+function lightDark() {
+    lightMode = !lightMode
+    if (lightMode === true) {
+        document.getElementById("kofi").style.color = "white";
+        document.body.style.backgroundColor = 'lightblue';
+
+        backgroundColor = 'lightblue'
+        ASCIIColor = 'white'
+
+        effect.domElement.style.color = ASCIIColor;
+        effect.domElement.style.backgroundColor = backgroundColor;
+    } else {
+        document.getElementById("kofi").style.color = "white";
+        document.body.style.backgroundColor = 'lightblue';
+
+        backgroundColor = 'lightblue'
+        ASCIIColor = 'white'
+
+        effect.domElement.style.color = ASCIIColor;
+        effect.domElement.style.backgroundColor = backgroundColor;
+    }
+}
+
 // Function to handle window focus/blur events to toggle auto-rotation
 window.addEventListener('focus', function () {
     rotateModel = true; // Enable auto-rotation when window is focused
