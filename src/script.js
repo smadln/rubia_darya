@@ -179,25 +179,6 @@ function rotateMode() {
     rotateModel = !rotateModel
 }
 
-function animate() {
-    const elapsedTime = jo.getElapsedTime();
-    
-    if (!Zo) {
-        // Apply auto-rotation
-        ea.rotation.z = elapsedTime / 3; // Adjust auto-rotation speed as needed
-    } else {
-        // Apply manual rotation
-        ea.rotation.y += 0.01; // Adjust manual rotation speed as needed
-    }
-    
-    // Render the scene
-    n();
-    window.requestAnimationFrame(animate);
-}
-
-// Start the animation loop
-animate();
-
 document.getElementById('updateASCII').addEventListener('click', updateASCII);
 
 function updateASCII() {
