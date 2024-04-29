@@ -56,7 +56,7 @@ let effect;
 let characters = ' .:-+*=%@#'
 const effectSize = { amount: .205 }
 let backgroundColor = 'lightblue'
-let ASCIIColor = 'darkred'
+let ASCIIColor = 'red'
 
 function createEffect() {
     effect = new AsciiEffect(renderer, characters, { invert: true, resolution: effectSize.amount });
@@ -224,20 +224,20 @@ document.getElementById('lightDark').addEventListener('click', lightDark);
 function lightDark() {
     lightMode = !lightMode
     if (lightMode === true) {
-        document.getElementById("kofi").style.color = "darkred";
+        document.getElementById("kofi").style.color = "red";
         document.body.style.backgroundColor = 'lightblue';
 
         backgroundColor = 'lightblue'
-        ASCIIColor = 'darkred'
+        ASCIIColor = 'red'
 
         effect.domElement.style.color = ASCIIColor;
         effect.domElement.style.backgroundColor = backgroundColor;
     } else {
-        document.getElementById("kofi").style.color = "darkred";
+        document.getElementById("kofi").style.color = "red";
         document.body.style.backgroundColor = 'lightblue';
 
         backgroundColor = 'lightblue'
-        ASCIIColor = 'darkred'
+        ASCIIColor = 'red'
 
         effect.domElement.style.color = ASCIIColor;
         effect.domElement.style.backgroundColor = backgroundColor;
