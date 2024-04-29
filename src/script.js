@@ -218,19 +218,19 @@ function lightDark() {
     lightMode = !lightMode
     if (lightMode === true) {
         document.getElementById("kofi").style.color = "white";
-        document.body.style.backgroundColor = 'black';
+        document.body.style.backgroundColor = 'lightblue';
 
-        backgroundColor = 'black'
+        backgroundColor = 'lightblue'
         ASCIIColor = 'white'
 
         effect.domElement.style.color = ASCIIColor;
         effect.domElement.style.backgroundColor = backgroundColor;
     } else {
-        document.getElementById("kofi").style.color = "black";
-        document.body.style.backgroundColor = 'white';
+        document.getElementById("kofi").style.color = "white";
+        document.body.style.backgroundColor = 'lightblue';
 
-        backgroundColor = 'white'
-        ASCIIColor = 'black'
+        backgroundColor = 'lightblue'
+        ASCIIColor = 'white'
 
         effect.domElement.style.color = ASCIIColor;
         effect.domElement.style.backgroundColor = backgroundColor;
