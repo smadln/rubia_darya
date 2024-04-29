@@ -113,45 +113,22 @@ stlLoader.load(
         window.addEventListener('blur', function () {
             rotateModel = false; // Disable auto-rotation when window loses focus
         });
-        
-        function render() {
-            renderer.render(scene, camera);
-        }
 
-        tick()
-
-        document.getElementById('file-selector').addEventListener('change', openFile, false);
-
-        function openFile(evt) {
-            const fileObject = evt.target.files[0];
-
-            const reader = new FileReader();
-            reader.readAsArrayBuffer(fileObject);
-            reader.onload = function () {
-                if (userUploaded == false) {
-                    userUploaded = true;
-                }
-                const geometry = stlLoader.parse(this.result);
-                tempGeometry = geometry;
-                myMesh.geometry = geometry;
-                myMesh.geometry.center()
-
-                myMesh.rotation.x = -90 * Math.PI / 180;
-
-                myMesh.geometry.computeBoundingBox();
-                var bbox = myMesh.geometry.boundingBox;
-
-                // camera.position.x = ((bbox.max.x * 4));
-                // camera.position.y = ((bbox.max.y));
-                // camera.position.z = ((bbox.max.z * 3));
-
-                myMesh.position.y = ((bbox.max.z - bbox.min.z) / 6)
-
-                scene.add(myMesh);
-            };
-        };
+        tick();
     }
 )
+
+function render() {
+    renderer.render(scene, camera);
+}
+
+function tick() {
+    requestAnimationFrame(tick);
+    if (rotateModel) {
+        myMesh.rotation.y += 0.01; // Adjust the rotation speed as needed
+    }
+    render();
+}
 
 document.getElementById('screenshotButton').addEventListener('click', takeScreenshot);
 
@@ -183,66 +160,8 @@ window.addEventListener('focus', function () {
 });
 
 window.addEventListener('blur', function () {
-    rotateModel = false; // Disable auto-rotation when window loses focus
+    rotateModel = false;
 });
-
-document.getElementById('updateASCII').addEventListener('click', updateASCII);
-
-function updateASCII() {
-
-    document.body.removeChild(effect.domElement)
-
-    characters = " " + "." + document.getElementById('newASCII').value;
-
-    createEffect()
-    onWindowResize()
-
-    document.body.appendChild(effect.domElement)
-
-    controls = new OrbitControls(camera, effect.domElement)
-
-}
-
-document.getElementById('resetASCII').addEventListener('click', resetASCII);
-
-function resetASCII() {
-
-    document.body.removeChild(effect.domElement)
-
-    characters = ' .:-+*=#'
-
-    createEffect()
-    onWindowResize()
-
-    document.body.appendChild(effect.domElement)
-
-    controls = new OrbitControls(camera, effect.domElement)
-}
-
-document.getElementById('lightDark').addEventListener('click', lightDark);
-
-function lightDark() {
-    lightMode = !lightMode
-    if (lightMode === true) {
-        document.getElementById("kofi").style.color = "red";
-        document.body.style.backgroundColor = 'lightblue';
-
-        backgroundColor = 'lightblue'
-        ASCIIColor = 'red'
-
-        effect.domElement.style.color = ASCIIColor;
-        effect.domElement.style.backgroundColor = backgroundColor;
-    } else {
-        document.getElementById("kofi").style.color = "red";
-        document.body.style.backgroundColor = 'lightblue';
-
-        backgroundColor = 'lightblue'
-        ASCIIColor = 'red'
-
-        effect.domElement.style.color = ASCIIColor;
-        effect.domElement.style.backgroundColor = backgroundColor;
-    }
-}
 
 window.addEventListener('resize', onWindowResize);
 
