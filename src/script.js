@@ -103,24 +103,32 @@ stlLoader.load(
 
         controls = new OrbitControls(camera, effect.domElement)
 
-
         function tick() {
-            if (rotateModel == true) {
-                const elapsedTime = clock.getElapsedTime()
+            const elapsedTime = clock.getElapsedTime()
+            if (!controls.enabled) {
                 myMesh.rotation.z = (elapsedTime) / 3
-                render()
-                window.requestAnimationFrame(tick)
-            } else {
-                render()
-                window.requestAnimationFrame(tick)
             }
+            render()
+            window.requestAnimationFrame(tick)
         }
-
+        
         function render() {
-            effect.render(scene, camera);
+            effect.render(scene, camera)
         }
-
+        
+        // Start auto-rotation initially
+        rotateModel = true
+        
+        controls.addEventListener('change', function () {
+            if (controls.enabled) {
+                rotateModel = false // Stop auto-rotation when user interacts
+            } else {
+                rotateModel = true // Resume auto-rotation when user stops interacting
+            }
+        })
+        
         tick()
+        
 
         document.getElementById('file-selector').addEventListener('change', openFile, false);
 
