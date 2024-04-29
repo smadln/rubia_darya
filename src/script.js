@@ -11,9 +11,6 @@ let lightMode = true
 //Create a clock for rotation
 const clock = new THREE.Clock()
 
-// Set rotate boolean variable
-let rotateModel = false
-
 //Ugh, don't ask about this stuff
 var userUploaded = false
 let controls
