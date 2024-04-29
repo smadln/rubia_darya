@@ -58,7 +58,7 @@ let effect;
 
 let characters = ' .:-+*=%@#'
 const effectSize = { amount: .205 }
-let backgroundColor = 'black'
+let backgroundColor = 'lightblue'
 let ASCIIColor = 'white'
 
 function createEffect() {
@@ -217,20 +217,20 @@ document.getElementById('lightDark').addEventListener('click', lightDark);
 function lightDark() {
     lightMode = !lightMode
     if (lightMode === true) {
-        document.getElementById("kofi").style.color = "white";
-        document.body.style.backgroundColor = 'black';
+        document.getElementById("kofi").style.color = "lightblue";
+        document.body.style.backgroundColor = 'white';
 
-        backgroundColor = 'black'
+        backgroundColor = 'lightblue'
         ASCIIColor = 'white'
 
         effect.domElement.style.color = ASCIIColor;
         effect.domElement.style.backgroundColor = backgroundColor;
     } else {
-        document.getElementById("kofi").style.color = "black";
-        document.body.style.backgroundColor = 'white';
+        document.getElementById("kofi").style.color = "white";
+        document.body.style.backgroundColor = 'lightblue';
 
-        backgroundColor = 'white'
-        ASCIIColor = 'black'
+        backgroundColor = 'lightblue'
+        ASCIIColor = 'white'
 
         effect.domElement.style.color = ASCIIColor;
         effect.domElement.style.backgroundColor = backgroundColor;
