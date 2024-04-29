@@ -171,11 +171,19 @@ function takeScreenshot() {
 // Set rotate boolean variable
 let rotateModel = true; // Set to true initially for auto-rotation to start
 
-document.getElementById('rotateButton').addEventListener('click', rotateMode);
+// Event listener for user interaction with the model
+controls.addEventListener('change', function () {
+    rotateModel = false; // Disable auto-rotation when user interacts with the model
+});
 
-function rotateMode() {
-    rotateModel = !rotateModel; // Toggle rotateModel between true and false
-}
+// Function to handle window focus/blur events to toggle auto-rotation
+window.addEventListener('focus', function () {
+    rotateModel = true; // Enable auto-rotation when window is focused
+});
+
+window.addEventListener('blur', function () {
+    rotateModel = false; // Disable auto-rotation when window loses focus
+});
 
 document.getElementById('updateASCII').addEventListener('click', updateASCII);
 
