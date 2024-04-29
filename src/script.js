@@ -5,12 +5,6 @@ import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js'
 import { AsciiEffect } from 'three/examples/jsm/effects/AsciiEffect.js';
 import html2canvas from 'html2canvas';
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Code to trigger button click event
-    const screenshotButton = document.getElementById('screenshotButton');
-    screenshotButton.click();
-});
-
 // LightMode
 let lightMode = true
 
@@ -156,7 +150,6 @@ stlLoader.load(
     }
 )
 
-
 document.getElementById('screenshotButton').addEventListener('click', takeScreenshot);
 
 function takeScreenshot() {
@@ -173,11 +166,10 @@ function takeScreenshot() {
     });
 }
 
-// Remove the click event listener for rotateButton
-// document.getElementById('rotateButton').addEventListener('click', rotateMode);
-
-// Instead, call rotateMode directly after a certain interval
-setInterval(rotateMode, 1000); // Adjust the interval as needed (1000 milliseconds = 1 second)
+// Trigger the click event on the rotate button programmatically when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('rotateButton').click();
+});
 
 // Adjust the rotateMode function to toggle the rotateModel variable
 function rotateMode() {
