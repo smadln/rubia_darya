@@ -97,20 +97,21 @@ stlLoader.load(
 
         scene.add(myMesh);
 
+        controls = new OrbitControls(camera, effect.domElement);
 
-        controls = new OrbitControls(camera, effect.domElement)
-
-        function tick() {
-            if (rotateModel) { // Check if auto-rotation is enabled
-                const elapsedTime = clock.getElapsedTime();
-                myMesh.rotation.z = (elapsedTime) / 3; // Update rotation if enabled
-            }
-            
-            render(); // Always render the scene
-            
-            window.requestAnimationFrame(tick); // Request the next frame
-        }
-
+        // Add event listeners for user interaction and window focus/blur events
+        controls.addEventListener('change', function () {
+            rotateModel = false; // Disable auto-rotation when user interacts with the model
+        });
+        
+        window.addEventListener('focus', function () {
+            rotateModel = true; // Enable auto-rotation when window is focused
+        });
+        
+        window.addEventListener('blur', function () {
+            rotateModel = false; // Disable auto-rotation when window loses focus
+        });
+        
         function render() {
             effect.render(scene, camera);
         }
