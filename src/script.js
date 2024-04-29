@@ -5,16 +5,16 @@ import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js'
 import { AsciiEffect } from 'three/examples/jsm/effects/AsciiEffect.js';
 import html2canvas from 'html2canvas';
 
-// LightMode
+//LightMode
 let lightMode = true
 
-// Create a clock for rotation
+//Create a clock for rotation
 const clock = new THREE.Clock()
 
 // Set rotate boolean variable
-let rotateModel = true
+let rotateModel = false
 
-// Ugh, don't ask about this stuff
+//Ugh, don't ask about this stuff
 var userUploaded = false
 let controls
 
@@ -25,7 +25,7 @@ const myMesh = new THREE.Mesh();
 const scene = new THREE.Scene()
 scene.background = new THREE.Color(0, 0, 0);
 
-// Lights
+//Lights
 const pointLight1 = new THREE.PointLight(0xffffff, 1);
 pointLight1.position.set(100, 100, 400);
 scene.add(pointLight1);
@@ -37,7 +37,7 @@ scene.add(pointLight2);
 // Parameters
 const stlLoader = new STLLoader()
 
-// Material
+//Material
 const material = new THREE.MeshStandardMaterial()
 material.flatShading = true
 material.side = THREE.DoubleSide;
@@ -56,9 +56,9 @@ const renderer = new THREE.WebGLRenderer()
 
 let effect;
 
-let characters = ' .:-+*=#'
+let characters = ' .:-+*=%@#'
 const effectSize = { amount: .205 }
-let backgroundColor = 'lightblue'
+let backgroundColor = 'black'
 let ASCIIColor = 'white'
 
 function createEffect() {
@@ -75,7 +75,7 @@ document.body.appendChild(effect.domElement)
 document.getElementById("ascii").style.whiteSpace = "prewrap"
 
 stlLoader.load(
-    '../rubia darya/3dpea copy.stl',
+    './models/test2.stl',
     function (geometry) {
 
         myMesh.material = material;
@@ -100,15 +100,20 @@ stlLoader.load(
 
         scene.add(myMesh);
 
+
         controls = new OrbitControls(camera, effect.domElement)
+
 
         function tick() {
             if (rotateModel == true) {
                 const elapsedTime = clock.getElapsedTime()
                 myMesh.rotation.z = (elapsedTime) / 3
                 render()
+                window.requestAnimationFrame(tick)
+            } else {
+                render()
+                window.requestAnimationFrame(tick)
             }
-            window.requestAnimationFrame(tick)
         }
 
         function render() {
@@ -118,6 +123,7 @@ stlLoader.load(
         tick()
 
         document.getElementById('file-selector').addEventListener('change', openFile, false);
+
 
         function openFile(evt) {
             const fileObject = evt.target.files[0];
@@ -150,6 +156,7 @@ stlLoader.load(
     }
 )
 
+
 document.getElementById('screenshotButton').addEventListener('click', takeScreenshot);
 
 function takeScreenshot() {
@@ -166,43 +173,10 @@ function takeScreenshot() {
     });
 }
 
-// Function to toggle rotation state
-function toggleRotation() {
-    rotateModel = !rotateModel;
-    if (rotateModel) {
-        // If rotation is enabled, start auto-rotation
-        startRotation();
-    } else {
-        // If rotation is disabled, stop auto-rotation
-        stopRotation();
-    }
-}
+document.getElementById('rotateButton').addEventListener('click', rotateMode);
 
-// Function to start auto-rotation
-function startRotation() {
-    // Set the interval for rotation
-    rotationInterval = setInterval(rotateModelFunction, 100); // Adjust the interval as needed (100 milliseconds = 0.1 seconds)
-
-    // Define the function to rotate the model
-    function rotateModelFunction() {
-        const elapsedTime = clock.getElapsedTime();
-        myMesh.rotation.z = (elapsedTime) / 3; // Adjust the rotation speed as needed
-        render();
-    }
-}
-
-// Function to stop auto-rotation
-function stopRotation() {
-    // Clear the interval to stop rotation
-    clearInterval(rotationInterval);
-}
-
-// Trigger the toggleRotation function when the page loads
-document.addEventListener('DOMContentLoaded', toggleRotation);
-
-// Adjust the rotateMode function to toggle the rotateModel variable
 function rotateMode() {
-    toggleRotation();
+    rotateModel = !rotateModel
 }
 
 document.getElementById('updateASCII').addEventListener('click', updateASCII);
@@ -228,7 +202,7 @@ function resetASCII() {
 
     document.body.removeChild(effect.domElement)
 
-    characters = ' .:-+*=#'
+    characters = ' .:-+*=%@#'
 
     createEffect()
     onWindowResize()
@@ -244,19 +218,19 @@ function lightDark() {
     lightMode = !lightMode
     if (lightMode === true) {
         document.getElementById("kofi").style.color = "white";
-        document.body.style.backgroundColor = 'lightblue';
+        document.body.style.backgroundColor = 'black';
 
-        backgroundColor = 'lightblue'
+        backgroundColor = 'black'
         ASCIIColor = 'white'
 
         effect.domElement.style.color = ASCIIColor;
         effect.domElement.style.backgroundColor = backgroundColor;
     } else {
-        document.getElementById("kofi").style.color = "white";
-        document.body.style.backgroundColor = 'lightblue';
+        document.getElementById("kofi").style.color = "black";
+        document.body.style.backgroundColor = 'white';
 
-        backgroundColor = 'lightblue'
-        ASCIIColor = 'white'
+        backgroundColor = 'white'
+        ASCIIColor = 'black'
 
         effect.domElement.style.color = ASCIIColor;
         effect.domElement.style.backgroundColor = backgroundColor;
@@ -281,7 +255,7 @@ function download(filename, text) {
     element.style.display = 'none';
     document.body.appendChild(element);
 
-    element.click
+    element.click();
 
     document.body.removeChild(element);
 }
