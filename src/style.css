@@ -43,6 +43,7 @@ form {
 input[type="button"] {
   color: lightblue;
   margin: 6px;
+  z-index: 1000;
 }
 
 
