@@ -173,12 +173,6 @@ function takeScreenshot() {
     });
 }
 
-document.getElementById('rotateButton').addEventListener('click', rotateMode);
-
-function rotateMode() {
-    rotateModel = !rotateModel
-}
-
 function animate() {
     if (!Zo) {
         ea.rotation.y += 0.01;
