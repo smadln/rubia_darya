@@ -72,7 +72,7 @@ document.body.appendChild(effect.domElement)
 document.getElementById("ascii").style.whiteSpace = "prewrap"
 
 stlLoader.load(
-    '3dpea copy.stl',
+    './rubia_darya/3dpea copy.stl',
     function (geometry) {
 
         myMesh.material = material;
