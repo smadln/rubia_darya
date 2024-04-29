@@ -99,7 +99,7 @@ stlLoader.load(
 
         scene.add(myMesh);
 
-        controls = new OrbitControls(camera, renderer.domElement);
+        controls = new OrbitControls(camera, auto-rotateModel, renderer.domElement);
 
         // Add event listeners for user interaction and window focus/blur events
         controls.addEventListener('change', function () {
