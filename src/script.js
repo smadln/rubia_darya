@@ -183,6 +183,8 @@ function animate() {
     window.requestAnimationFrame(animate);
 }
 
+animate();
+
 document.getElementById('updateASCII').addEventListener('click', updateASCII);
 
 function updateASCII() {
