@@ -1,7 +1,7 @@
 import 'style.css'
-import * as THREE from './threejs/build/three.module.min.js';
-import { GLTFLoader } from './threejs/loaders/GLTFLoader.js';
-import { AsciiEffect } from './threejs/effects/AsciiEffect.js';
+import * as THREE from './three.module.min.js';
+import { GLTFLoader } from './GLTFLoader.js';
+import { AsciiEffect } from './AsciiEffect.js';
 
 let camera, scene, renderer, effect, loader;
 
