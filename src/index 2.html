@@ -6,9 +6,6 @@
     <title>Sarah Madeline</title>
     <link href="main.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
-    <script src="https://unpkg.com/three@0.164.1/build/three.min.js"></script>
-    <script src="https://unpkg.com/three@0.164.1/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="https://unpkg.com/three@0.164.1/examples/js/effects/AsciiEffect.js"></script>
     <style>
         .box {display: flex; justify-content: center;}
         #ascii { width: 800px; height: 600px; cursor: grab; }
@@ -28,6 +25,9 @@
     <div class="box">
         <div id="ascii"></div> <!-- ASCII rendering target -->
     </div>
+    <script src="https://unpkg.com/browse/three@0.140.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/browse/three@0.140.0/examples/jsm/loaders/GLTFLoader.js"></script>
+    <script src="https://unpkg.com/browse/three@0.140.0/examples/jsm/effects/AsciiEffect.js"></script>
     <script>
       let camera, scene, renderer, effect, loader;
   
