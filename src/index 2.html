@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three.js Test</title>
-    <style>
-        body { margin: 0; }
-        canvas { width: 100%; height: 100% }
-    </style>
-</head>
-<body>
-    <script src="script.js"></script>
-</body>
+    <meta id="ascii" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Sarah Madeline</title>
+    <link href="main.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script type="application/importmap">
+      {
+          "imports": {
+              "three": "https://unpkg.com/three@0.156.0/build/three.module.js",
+              "three/addons/": "https://unpkg.com/three@0.156.0/examples/jsm/"
+          }
+      }
+    </script>
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="name">
+          <p>Sarah Madeline</p>
+      </div>
+      <ul class="horizontal-list">
+          <li><a href="./info.html?section=header" onclick="navigateToSection(event, 'header')">about /</a></li>
+          <li><a href="./info.html?section=cv" onclick="navigateToSection(event, 'cv')">cv /</a></li>
+          <li><a href="mailto:sarah.e.madeline@gmail.com">contact</a></li>
+      </ul>
+    </div>
+        <script>
+          if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            document.getElementById("rotateButton").style.display = "none";
+          }
+        </script>        
+      </div>
+      <div id="kofi">
+        <script src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
+      </div>
+    </form>
+  </body>
 </html>
