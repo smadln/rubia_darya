@@ -1,4 +1,4 @@
-import 'style.css'
+import './style.css'
 import * as THREE from './three.module.min.js';
 import { GLTFLoader } from './GLTFLoader.js';
 import { AsciiEffect } from './AsciiEffect.js';
@@ -25,7 +25,7 @@ function init() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     // Initialize the ASCII effect and add it to the document
-    effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true });
+    effect = new AsciiEffect(renderer, ' .:-+*=#', { invert: true });
     effect.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(effect.domElement);
 
@@ -37,7 +37,7 @@ function init() {
 
     // Initialize the GLTFLoader and load a model
     loader = new GLTFLoader();
-    loader.load('Desert lily.glb', function (gltf) {
+    loader.load('./Desert lily.glb', function (gltf) {
         console.log("GLTF model loaded successfully.");
         scene.add(gltf.scene);  // Add the loaded model to the scene
     }, function (xhr) {
