@@ -16,6 +16,10 @@ html, body {
     background-color: lightblue;
 }
 
+canvas { 
+    display: block;
+}
+
 /* Use vh units for vertical positioning */
 .name {
     position: absolute;
