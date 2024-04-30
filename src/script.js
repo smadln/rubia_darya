@@ -1,17 +1,9 @@
-import 'style.css'
+import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { STLLoader } from 'three/addons/loaders/STLLoader.js';
-import { AsciiEffect } from 'three/addons/effects/AsciiEffect.js';
-
-// LightMode
-let lightMode = true;
-
-// Clock for rotation, automatically starting it
-const clock = new THREE.Clock(true);
-
-// Set rotate boolean variable, default true for auto-rotation
-let rotateModel = true;
+// Comment out STL specific imports for now
+// import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+// import { AsciiEffect } from 'three/addons/effects/AsciiEffect.js';
 
 // Scene setup
 const scene = new THREE.Scene();
@@ -26,13 +18,6 @@ const pointLight2 = new THREE.PointLight(0xffffff, .5);
 pointLight2.position.set(-500, 100, -400);
 scene.add(pointLight2);
 
-// STL Loader for model import
-const stlLoader = new STLLoader();
-const material = new THREE.MeshStandardMaterial({
-    flatShading: true,
-    side: THREE.DoubleSide
-});
-
 // Renderer setup
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -40,60 +25,38 @@ document.body.appendChild(renderer.domElement);
 
 // Camera setup
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 2000);
-camera.position.z = 5; // Adjust this based on your model's size and desired view
+camera.position.z = 5; // Start with a basic distance
 
-// ASCII effect
-let effect = new AsciiEffect(renderer, ' .:-+*=#', { invert: true, resolution: 0.1 });
-effect.setSize(window.innerWidth, window.innerHeight);
-effect.domElement.style.color = 'white';
-effect.domElement.style.backgroundColor = 'black';
-document.body.appendChild(effect.domElement);
+// Controls setup
+const controls = new OrbitControls(camera, renderer.domElement);
 
-// Load and display the STL model
-stlLoader.load('./3dpea copy.stl', function (geometry) {
-    console.log('STL file loaded successfully');  // Confirm file load
-    const mesh = new THREE.Mesh(geometry, material);
-    geometry.computeVertexNormals();
-    mesh.geometry.center();
-    mesh.rotation.x = -Math.PI / 2; // Adjust as necessary
+// Basic geometry test
+const geometry = new THREE.BoxGeometry(1, 1, 1);
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
 
-    // Scale the mesh - adjust scale factors if needed
-    mesh.scale.set(0.1, 0.1, 0.1);
-    console.log('Mesh added to scene'); // Confirm mesh addition
-    scene.add(mesh);
-    
-    controls = new OrbitControls(camera, effect.domElement);
+// Log camera and renderer information
+console.log('Camera position:', camera.position);
+console.log('Renderer info:', renderer.info);
 
-    // Start the animation loop
-    function animate() {
-        requestAnimationFrame(animate);
-        if (rotateModel) {
-            mesh.rotation.z += 0.01; // Adjust rotation speed if necessary
-        }
-        effect.render(scene, camera);
-    }
+// Start the animation loop
+function animate() {
+    requestAnimationFrame(animate);
 
-    animate();
-}, function (xhr) {
-    console.log((xhr.loaded / xhr.total * 100) + '% loaded'); // Progress of loading
-}, function (error) {
-    console.error('An error happened loading the STL file:', error); // Error handling
-});
+    // Add a basic rotation to the cube
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
 
-// Event listeners for mouse and touch interaction
-document.addEventListener('mousedown', () => rotateModel = false);
-document.addEventListener('mouseup', () => rotateModel = true);
-document.addEventListener('touchstart', () => rotateModel = false);
-document.addEventListener('touchend', () => rotateModel = true);
+    // Render the scene from the perspective of the camera
+    renderer.render(scene, camera);
+}
 
-document.getElementById('rotateButton').addEventListener('click', function toggleRotation() {
-    rotateModel = !rotateModel;
-    console.log('Rotate mode toggled. Current value: ', rotateModel);
-});
+animate();
 
+// Event listeners for window resizing
 window.addEventListener('resize', function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    effect.setSize(window.innerWidth, window.innerHeight);
 });
