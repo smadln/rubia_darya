@@ -56,10 +56,12 @@ stlLoader.load('3dpea copy.stl', function (geometry) {
     geometry.computeVertexNormals();
     mesh.geometry.center();
     mesh.rotation.x = -Math.PI / 2; // Adjust as necessary
-    scene.add(mesh);
 
-    // Controls setup
-    const controls = new OrbitControls(camera, effect.domElement);
+    // Scale the mesh - adjust scale factors if needed
+    mesh.scale.set(0.1, 0.1, 0.1);
+
+    scene.add(mesh);
+    controls = new OrbitControls(camera, effect.domElement);
 
     // Start the animation loop
     function animate() {
@@ -72,6 +74,7 @@ stlLoader.load('3dpea copy.stl', function (geometry) {
 
     animate();
 });
+
 
 // Event listeners for mouse and touch interaction
 document.addEventListener('mousedown', () => rotateModel = false);
