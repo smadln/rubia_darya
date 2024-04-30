@@ -1,4 +1,3 @@
-import './style.css';
 import * as THREE from './three.module.min.js';
 import { GLTFLoader } from './GLTFLoader.js';
 import { AsciiEffect } from './AsciiEffect.js';
