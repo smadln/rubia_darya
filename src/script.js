@@ -5,20 +5,17 @@ import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js'
 import { AsciiEffect } from 'three/examples/jsm/effects/AsciiEffect.js';
 import html2canvas from 'html2canvas';
 
-//LightMode
-let lightMode = true
+// LightMode
+let lightMode = true;
 
-//Create a clock for rotation
-const clock = new THREE.Clock()
+// Clock for rotation, automatically starting it
+const clock = new THREE.Clock(true);
 
-// Set rotate boolean variable
-let rotateModel = false  // Initially set to false, toggle via UI
-
-// Creates empty mesh container
-const myMesh = new THREE.Mesh();
+// Set rotate boolean variable, default true for auto-rotation
+let rotateModel = true;
 
 // Scene setup
-const scene = new THREE.Scene()
+const scene = new THREE.Scene();
 scene.background = new THREE.Color(0, 0, 0);
 
 // Lights
@@ -31,92 +28,65 @@ pointLight2.position.set(-500, 100, -400);
 scene.add(pointLight2);
 
 // STL Loader for model import
-const stlLoader = new STLLoader()
-
-// Material configuration
-const material = new THREE.MeshStandardMaterial()
-material.flatShading = true
-material.side = THREE.DoubleSide;
+const stlLoader = new STLLoader();
+const material = new THREE.MeshStandardMaterial({
+    flatShading: true,
+    side: THREE.DoubleSide
+});
 
 // Renderer setup
-const renderer = new THREE.WebGLRenderer()
-const sizes = {
-    width: window.innerWidth,
-    height: window.innerHeight
-}
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
 
 // Camera setup
-const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 2000)
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 2000);
+camera.position.z = 5; // Adjust this based on your model's size and desired view
 
-let effect;
-let characters = ' .:-+*=#'
-const effectSize = { amount: .205 }
-let backgroundColor = 'lightblue'
-let ASCIIColor = 'white'
-
-function createEffect() {
-    effect = new AsciiEffect(renderer, characters, { invert: true, resolution: effectSize.amount });
-    effect.setSize(sizes.width, sizes.height);
-    effect.domElement.style.color = ASCIIColor;
-    effect.domElement.style.backgroundColor = backgroundColor;
-}
-
-createEffect()
-document.body.appendChild(effect.domElement)
-document.getElementById("ascii").style.whiteSpace = "prewrap"
+// ASCII effect
+let effect = new AsciiEffect(renderer, ' .:-+*=#', { invert: true, resolution: 0.1 });
+effect.setSize(window.innerWidth, window.innerHeight);
+effect.domElement.style.color = 'white';
+effect.domElement.style.backgroundColor = 'black';
+document.body.appendChild(effect.domElement);
 
 // Load and display the STL model
-stlLoader.load(
-    '3dpea copy.stl',
-    function (geometry) {
-        myMesh.material = material;
-        myMesh.geometry = geometry;
-        geometry.computeVertexNormals();
-        myMesh.geometry.center();
-        myMesh.rotation.x = -Math.PI / 2;
+stlLoader.load('3dpea copy.stl', function (geometry) {
+    const mesh = new THREE.Mesh(geometry, material);
+    geometry.computeVertexNormals();
+    mesh.geometry.center();
+    mesh.rotation.x = -Math.PI / 2; // Adjust as necessary
+    scene.add(mesh);
 
-        scene.add(myMesh);
-        controls = new OrbitControls(camera, effect.domElement);
-        animate(); // Starts the rendering loop
-    }
-);
+    // Controls setup
+    const controls = new OrbitControls(camera, effect.domElement);
 
-// Rendering loop with auto-rotation
-function animate() {
-    requestAnimationFrame(animate);
-    if (rotateModel) {
-        const elapsedTime = clock.getElapsedTime();
-        myMesh.rotation.z = elapsedTime / 3;
+    // Start the animation loop
+    function animate() {
+        requestAnimationFrame(animate);
+        if (rotateModel) {
+            mesh.rotation.z += 0.01; // Adjust rotation speed if necessary
+        }
+        effect.render(scene, camera);
     }
-    effect.render(scene, camera);
-}
+
+    animate();
+});
 
 // Event listeners for mouse and touch interaction
-document.addEventListener('mousedown', () => {
-    rotateModel = false;
-});
-document.addEventListener('mouseup', () => {
-    rotateModel = true;
-});
-document.addEventListener('touchstart', () => {
-    rotateModel = false;
-});
-document.addEventListener('touchend', () => {
-    rotateModel = true;
-});
+document.addEventListener('mousedown', () => rotateModel = false);
+document.addEventListener('mouseup', () => rotateModel = true);
+document.addEventListener('touchstart', () => rotateModel = false);
+document.addEventListener('touchend', () => rotateModel = true);
 
-document.getElementById('rotateButton').addEventListener('click', toggleRotation);
-
-function toggleRotation() {
+document.getElementById('rotateButton').addEventListener('click', function toggleRotation() {
     rotateModel = !rotateModel;
     console.log('Rotate mode toggled. Current value: ', rotateModel);
-}
+});
 
-window.addEventListener('resize', onWindowResize);
-
-function onWindowResize() {
+window.addEventListener('resize', function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
     effect.setSize(window.innerWidth, window.innerHeight);
-}
+});
