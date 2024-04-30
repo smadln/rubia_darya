@@ -51,7 +51,7 @@ effect.domElement.style.backgroundColor = 'black';
 document.body.appendChild(effect.domElement);
 
 // Load and display the STL model
-stlLoader.load('3dpea copy.stl', function (geometry) {
+stlLoader.load('./3dpea copy.stl', function (geometry) {
     const mesh = new THREE.Mesh(geometry, material);
     geometry.computeVertexNormals();
     mesh.geometry.center();
