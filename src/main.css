@@ -20,6 +20,10 @@ canvas {
     display: block;
 }
 
+model-viewer::part(hotspot) {
+    display: none;
+}
+
 /* Use vh units for vertical positioning */
 .name {
     position: absolute;
