@@ -52,6 +52,7 @@ document.body.appendChild(effect.domElement);
 
 // Load and display the STL model
 stlLoader.load('./3dpea copy.stl', function (geometry) {
+    console.log('STL file loaded successfully');  // Confirm file load
     const mesh = new THREE.Mesh(geometry, material);
     geometry.computeVertexNormals();
     mesh.geometry.center();
@@ -59,8 +60,9 @@ stlLoader.load('./3dpea copy.stl', function (geometry) {
 
     // Scale the mesh - adjust scale factors if needed
     mesh.scale.set(0.1, 0.1, 0.1);
-
+    console.log('Mesh added to scene'); // Confirm mesh addition
     scene.add(mesh);
+    
     controls = new OrbitControls(camera, effect.domElement);
 
     // Start the animation loop
@@ -73,8 +75,11 @@ stlLoader.load('./3dpea copy.stl', function (geometry) {
     }
 
     animate();
+}, function (xhr) {
+    console.log((xhr.loaded / xhr.total * 100) + '% loaded'); // Progress of loading
+}, function (error) {
+    console.error('An error happened loading the STL file:', error); // Error handling
 });
-
 
 // Event listeners for mouse and touch interaction
 document.addEventListener('mousedown', () => rotateModel = false);
