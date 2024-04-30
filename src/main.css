@@ -20,9 +20,9 @@ canvas {
     display: block;
 }
 
-model-viewer::part(hotspot) {
+model-viewer::part(interaction-prompt) {
     display: none;
-}
+  }
 
 /* Use vh units for vertical positioning */
 .name {
