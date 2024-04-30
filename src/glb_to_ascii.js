@@ -1,7 +1,12 @@
-console.log("Script loaded.");
+import 'style.css'
+// Import the necessary modules from Three.js
+import * as THREE from './three.js/build/three.module.min.js';
+import { GLTFLoader } from './three.js/loaders/GLTFLoader.js';
+import { AsciiEffect } from './three.js/effects/AsciiEffect.js';
+
+let camera, scene, renderer, effect, loader;
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM fully loaded and parsed.");
     init();
     animate();
 });
@@ -9,35 +14,41 @@ document.addEventListener('DOMContentLoaded', function() {
 function init() {
     console.log("Initializing scene...");
 
+    // Create a new Three.js scene
     scene = new THREE.Scene();
+    
+    // Set up the camera
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.set(0, 0, 5);
 
+    // Create a WebGL renderer and set its size
     renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    effect = new THREE.AsciiEffect(renderer, ' .:-+*=%@#', { invert: true });
+    // Initialize the ASCII effect and add it to the document
+    effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true });
     effect.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(effect.domElement);
-    console.log("ASCII effect initialized and added to document.");
 
+    // Add lighting to the scene
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
     const pointLight = new THREE.PointLight(0xffffff, 0.5);
     scene.add(pointLight);
 
-    loader = new THREE.GLTFLoader();
+    // Initialize the GLTFLoader and load a model
+    loader = new GLTFLoader();
     loader.load('Desert lily.glb', function (gltf) {
         console.log("GLTF model loaded successfully.");
-        scene.add(gltf.scene);
+        scene.add(gltf.scene);  // Add the loaded model to the scene
     }, function (xhr) {
         console.log(`Model load progress: ${((xhr.loaded / xhr.total) * 100).toFixed(2)}%`);
     }, function (error) {
         console.error('An error happened during model loading:', error);
     });
 
+    // Set up window resize listener
     window.addEventListener('resize', onWindowResize, false);
-    console.log("Event listeners added.");
 }
 
 function onWindowResize() {
@@ -45,11 +56,9 @@ function onWindowResize() {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
     effect.setSize(window.innerWidth, window.innerHeight);
-    console.log("Window resized.");
 }
 
 function animate() {
     requestAnimationFrame(animate);
-    effect.render(scene, camera);
-    console.log("Scene rendered.");
+    effect.render(scene, camera);  // Render the scene using the ASCII effect
 }
