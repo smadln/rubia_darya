@@ -6,15 +6,7 @@
     <title>Sarah Madeline</title>
     <link href="main.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
-    <script type="application/importmap">
-      {
-          "imports": {
-              "three": "https://unpkg.com/three@0.156.0/build/three.module.js",
-              "three/addons/": "https://unpkg.com/three@0.156.0/examples/jsm/"
-          }
-      }
-    </script>
-    <script type="module" src="./script.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   </head>
   <body>
     <div class="container" id="container">
@@ -27,11 +19,9 @@
           <li><a href="mailto:sarah.e.madeline@gmail.com">contact</a></li>
       </ul>
     </div>
-        <script>
-          if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            document.getElementById("rotateButton").style.display = "none";
-          }
-        </script>        
+    <div class="box">
+      <model-viewer src="3dpea copy.stl" camera-controls auto-rotate disable-zoom></model-viewer>
+    </div>      
       </div>
       <div id="kofi">
         <script src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
