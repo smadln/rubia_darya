@@ -173,10 +173,11 @@ function takeScreenshot() {
     });
 }
 
-document.getElementById('rotateButton').addEventListener('click', rotateMode);
+document.getElementById('rotateButton').addEventListener('click', toggleRotation);
 
-function rotateMode() {
-    rotateModel = !rotateModel
+function toggleRotation() {
+    rotateModel = !rotateModel;
+    console.log('Rotate mode toggled. Current value: ', rotateModel);
 }
 
 document.getElementById('updateASCII').addEventListener('click', updateASCII);
