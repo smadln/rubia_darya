@@ -105,22 +105,21 @@ stlLoader.load(
 
 
         function tick() {
-            if (rotateModel == true) {
-                const elapsedTime = clock.getElapsedTime()
-                myMesh.rotation.z = (elapsedTime) / 3
-                render()
-                window.requestAnimationFrame(tick)
-            } else {
-                render()
-                window.requestAnimationFrame(tick)
+            if (rotateModel) {
+                const elapsedTime = clock.getElapsedTime();
+                myMesh.rotation.z = elapsedTime / 3;
             }
+        
+            render();
+            window.requestAnimationFrame(tick);
         }
-
+        
         function render() {
             effect.render(scene, camera);
         }
-
-        tick()
+        
+        tick(); // Starts the rendering loop
+        
 
         document.getElementById('file-selector').addEventListener('change', openFile, false);
 
