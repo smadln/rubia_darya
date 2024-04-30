@@ -16,6 +16,10 @@ html, body {
     background-color: lightblue;
 }
 
+canvas { 
+    display: block;
+}
+
 .webgl {
     position: fixed;
     top: 0;
