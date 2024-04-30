@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta id="ascii" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <title>Sarah Madeline</title>
-    <script type="module" src="./script.js"></script>
     <link href="main.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
+    <script type="application/importmap">
+      {
+          "imports": {
+              "three": "https://unpkg.com/three@0.156.0/build/three.module.js",
+              "three/addons/": "https://unpkg.com/three@0.156.0/examples/jsm/"
+          }
+      }
+    </script>
+    <script type="module" src="./script.js"></script>
   </head>
   <body>
     <div class="container" id="container">
@@ -28,14 +36,6 @@
       <div id="kofi">
         <script src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
       </div>
-      <script type="importmap">
-        {
-            "imports": {
-                "three": "https://unpkg.com/three@0.156.0/build/three.module.js",
-                "three/addons/": "https://unpkg.com/three@0.156.0/examples/jsm/"
-            }
-        }
-    </script>
     </form>
   </body>
 </html>
