@@ -1,8 +1,8 @@
 import 'style.css'
 import * as THREE from 'three';
-import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
-import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
-import { AsciiEffect } from 'three/examples/js/effects/AsciiEffect.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+import { AsciiEffect } from 'three/addons/effects/AsciiEffect.js';
 
 // LightMode
 let lightMode = true;
