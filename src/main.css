@@ -113,8 +113,8 @@ input[type="button"] {
 }
 
 #rotateButton {
-    background-color: #f44336; /* Red background */
-    /* Other styles as necessary */
+    border: none; 
+    background: none;
 }
 
 #lightDark {
@@ -126,31 +126,44 @@ input[type="button"] {
 
 #input-button {
     pointer-events: none; /* The button won't respond to mouse clicks */
-    opacity: 0.5; /* Optional: makes the button look disabled */
+    border: none; 
+    background: none;
 }
 
 #clipboardASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
+    border: none; 
+    background: none;
 }
 
 #copyASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
+    border: none; 
+    background: none;
 }
 
 #newASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
+    border: none; 
+    background: none;
 }
 
 #updateASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
+    border: none; 
+    background: none;
 }
 
 #resetASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
+    border: none; 
+    background: none;
 }
 
 #screenshotButton {
     pointer-events: none; /* The button won't respond to mouse clicks */
+    border: none; 
+    background: none;
 }
 
 /*# sourceMappingURL=main.css.map*/
