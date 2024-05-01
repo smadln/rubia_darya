@@ -126,7 +126,7 @@ input[type="button"] {
 }
 
 #lightDark:hover {
-    color: rgb(143, 132, 227); /* Color changes when you hover over the button */
+    color: whitesmoke; /* Color changes when you hover over the button */
 }
 
 #input-button {
