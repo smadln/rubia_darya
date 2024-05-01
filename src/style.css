@@ -44,6 +44,10 @@ form {
     bottom: 0;
 }
 
+.light-mode-active {
+    color: lightblue; /* The color when light mode is active */
+}
+
 input[type="button"] {
   color: lightblue;
   margin: 6px;
