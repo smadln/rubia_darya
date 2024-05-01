@@ -39,7 +39,7 @@ model-viewer::part(interaction-prompt) {
   
 .horizontal-list {
     position: absolute;
-    top: 4.5vh; /* Use vh units for vertical positioning */
+    top: 4vh; /* Use vh units for vertical positioning */
     right: 1%; /* Adjust as needed */
     display: flex;
     list-style-type: none;
