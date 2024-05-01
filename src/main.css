@@ -115,6 +115,18 @@ input[type="button"] {
 #rotateButton {
     border: none; 
     background: none;
+    position: absolute;
+    top: 4.5vh; /* Use vh units for vertical positioning */
+    right: 1%; /* Adjust as needed */
+    margin-right: 10px;
+    font-size: 14px;
+    font-family: Georgia, Tahoma, Verdana;
+    color: grey;
+    text-decoration: none;
+}
+
+#rotateButton:hover {
+    color: rgb(143, 132, 227); /* Color changes when you hover over the button */
 }
 
 #lightDark {
