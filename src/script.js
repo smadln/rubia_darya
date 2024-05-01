@@ -1,4 +1,3 @@
-import 'style.css'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
@@ -56,7 +55,7 @@ const renderer = new THREE.WebGLRenderer();
 
 let effect;
 
-let characters = ' .:-+*=#';
+let characters = ' .:-+*=#%@$';
 const effectSize = { amount: .205 };
 let backgroundColor = 'lightblue';
 let ASCIIColor = 'white';
