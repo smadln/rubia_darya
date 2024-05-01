@@ -132,6 +132,10 @@ input[type="button"] {
     color: rgb(143, 132, 227); /* Color changes when you hover over the button */
 }
 
+.light-mode-active {
+    color: lightblue; /* The color when light mode is active */
+}
+
 #lightDark {
     color: rgb(255, 255, 110);
     font-size: 18px;

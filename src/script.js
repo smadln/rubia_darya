@@ -210,6 +210,23 @@ document.getElementById('lightDark').addEventListener('click', function() {
     effect.domElement.style.backgroundColor = backgroundColor;
 });
 
+document.getElementById('lightDark').addEventListener('click', function() {
+    // Assume lightMode is a boolean that tracks whether light mode is active
+    lightMode = !lightMode; 
+
+    // Toggle light mode styles
+    if (lightMode) {
+        // Apply light mode styles
+        document.body.style.backgroundColor = 'white'; // Example: changing the background to white
+        this.classList.add('light-mode-active'); // Add the class to change the text color
+    } else {
+        // Revert to dark mode styles
+        document.body.style.backgroundColor = 'lightblue'; // Example: changing the background to black
+        this.classList.remove('light-mode-active'); // Remove the class to revert the text color
+    }
+});
+
+
 // Ensure the onWindowResize function is declared to handle any resizing of the window
 window.addEventListener('resize', onWindowResize);
 
