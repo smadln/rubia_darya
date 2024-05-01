@@ -133,42 +133,56 @@ input[type="button"] {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
     background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
 }
 
 #clipboardASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
     background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
 }
 
 #copyASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
     background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
 }
 
 #newASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
     background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
 }
 
 #updateASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
     background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
 }
 
 #resetASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
     background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
 }
 
 #screenshotButton {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
     background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
 }
 
 /*# sourceMappingURL=main.css.map*/
