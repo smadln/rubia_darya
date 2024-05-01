@@ -42,12 +42,6 @@ model-viewer::part(interaction-prompt) {
     top: 4vh; /* This will align all items from the top */
 }
 
-.name, .header a, .horizontal-list li a, #lightDark {
-    font-size: 18px;
-    line-height: 1.2; /* Adjust this value as needed */
-    font-family: Georgia, Tahoma, Verdana;
-    /* Other styles remain unchanged */
-}
 
 .horizontal-list {
     position: absolute;
@@ -162,6 +156,9 @@ input[type="button"] {
     line-height: 1.2; /* Make sure line-height matches that of other text elements */
     vertical-align: middle; /* This can help align inline or inline-block elements */
     /* Adjust left as needed or use right property if aligning on the right side of the page */
+    padding-top: 0; /* Align text to the top */
+    padding-bottom: 0; /* Remove bottom padding */
+    overflow: hidden; /* Prevent text from spilling out */
 }
 
 #lightDark:hover {
@@ -243,11 +240,17 @@ input[type="button"] {
         font-size: 16px;
         margin-right: 0;
         top: 4vh;
+        padding-top: 0; /* Align text to the top */
+        padding-bottom: 0; /* Remove bottom padding */
+        overflow: hidden; /* Prevent text from spilling out */
     }
 
     #rotateButton {
         top: 4vh;
         font-size: 12px; 
+        padding-top: 0; /* Align text to the top */
+        padding-bottom: 0; /* Remove bottom padding */
+        overflow: hidden; /* Prevent text from spilling out */
     }
 
     header {
@@ -288,11 +291,17 @@ input[type="button"] {
         font-size: 16px;
         margin-right: 0;
         top: 4vh;
+        padding-top: 0; /* Align text to the top */
+        padding-bottom: 0; /* Remove bottom padding */
+        overflow: hidden; /* Prevent text from spilling out */
     }
 
     #rotateButton {
         top: 4vh;
         font-size: 12px; 
+        padding-top: 0; /* Align text to the top */
+        padding-bottom: 0; /* Remove bottom padding */
+        overflow: hidden; /* Prevent text from spilling out */
     }
 
     header {
@@ -321,11 +330,17 @@ input[type="button"] {
         font-size: 16px;
         margin-right: 0;
         top: 4vh;
+        padding-top: 0; /* Align text to the top */
+        padding-bottom: 0; /* Remove bottom padding */
+        overflow: hidden; /* Prevent text from spilling out */
     }
 
     #rotateButton {
         top: 4vh;
         font-size: 12px; 
+        padding-top: 0; /* Align text to the top */
+        padding-bottom: 0; /* Remove bottom padding */
+        overflow: hidden; /* Prevent text from spilling out */
     }
 
     header {
