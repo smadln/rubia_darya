@@ -40,7 +40,7 @@ model-viewer::part(interaction-prompt) {
 .horizontal-list {
     position: absolute;
     top: 4.5vh; /* Use vh units for vertical positioning */
-    right: 1%; /* Adjust as needed */
+    right: 1.5%; /* Adjust as needed */
     display: flex;
     list-style-type: none;
 }
@@ -117,7 +117,7 @@ input[type="button"] {
     background: none;
     position: absolute;
     top: 4vh; /* Use vh units for vertical positioning */
-    right: calc(1% + 150px); 
+    right: calc(1.5% - 10px); 
     /* Other existing styles */
     border: none; 
     background: none;
