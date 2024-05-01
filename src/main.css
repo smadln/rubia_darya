@@ -240,6 +240,7 @@ input[type="button"] {
 
     .horizontal-list {
         right: 10px; /* Adjust the right position for smaller screens */
+        top: 4.5vh;
     }
 
     .horizontal-list li {
@@ -279,6 +280,7 @@ input[type="button"] {
 
     .horizontal-list {
         right: 10px; /* Adjust the right position for smaller screens */
+        top: 4.5vh;
     }
 
     .horizontal-list li {
@@ -311,6 +313,7 @@ input[type="button"] {
 
     .horizontal-list {
         right: 10px; /* Adjust the right position for smaller screens */
+        top: 4.5vh;
     }
 
     .horizontal-list li {
