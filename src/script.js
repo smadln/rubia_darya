@@ -1,5 +1,5 @@
 import './style.css'
-import * as THREE from 'three'
+import * as THREE from './three.module.min.js'
 import { OrbitControls } from './OrbitControls.js'
 import { STLLoader } from './STLLoader.js'
 import { AsciiEffect } from './AsciiEffect.js';
