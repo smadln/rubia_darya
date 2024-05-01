@@ -117,8 +117,11 @@ input[type="button"] {
     background: none;
     position: absolute;
     top: 4vh; /* Use vh units for vertical positioning */
-    right: 1%; /* Adjust as needed */
-    margin-right: 10px;
+    right: calc(1% + 60px); /* 60px is a placeholder; adjust as needed based on the width of the buttons in .horizontal-list */
+    /* Other existing styles */
+    border: none; 
+    background: none;
+    margin-right: 10px; /* Adjust the margin if necessary */
     font-size: 14px;
     font-family: Georgia, Tahoma, Verdana;
     color: grey;
