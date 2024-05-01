@@ -123,7 +123,7 @@ input[type="button"] {
     background: none;
     position: absolute;
     padding: none;
-    top: 4vh; /* Use vh units for vertical positioning */
+    top: 3.5vh; /* Use vh units for vertical positioning */
     right: calc(1.5% - 10px); 
     /* Other existing styles */
     border: none; 
@@ -149,7 +149,7 @@ input[type="button"] {
     font-family: Georgia, Tahoma, Verdana;
     position: absolute;
     left: 1.5%; /* Adjust as needed */
-    top: 4vh; /* Use vh units for vertical positioning */
+    top: 3.5vh; /* Use vh units for vertical positioning */
     border: none; 
     background: none;
     padding: 0; /* Remove padding if not necessary */
@@ -239,14 +239,14 @@ input[type="button"] {
     #lightDark {
         font-size: 16px;
         margin-right: 0;
-        top: 4vh;
+        top: 3.5vh;
         padding-top: 0; /* Align text to the top */
         padding-bottom: 0; /* Remove bottom padding */
         overflow: hidden; /* Prevent text from spilling out */
     }
 
     #rotateButton {
-        top: 4vh;
+        top: 3.5vh;
         font-size: 12px; 
         padding-top: 0; /* Align text to the top */
         padding-bottom: 0; /* Remove bottom padding */
@@ -268,10 +268,6 @@ input[type="button"] {
         font-size: 12px; /* Decrease font size for smaller screens */
     }
 
-    .name, #lightDark, .header, .horizontal-list, #rotateButton {
-        top: 4vh;
-        line-height: 1.2; /* Adjust line height if necessary for smaller screens */
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -290,14 +286,14 @@ input[type="button"] {
     #lightDark {
         font-size: 16px;
         margin-right: 0;
-        top: 4vh;
+        top: 3.5vh;
         padding-top: 0; /* Align text to the top */
         padding-bottom: 0; /* Remove bottom padding */
         overflow: hidden; /* Prevent text from spilling out */
     }
 
     #rotateButton {
-        top: 4vh;
+        top: 3.5vh;
         font-size: 12px; 
         padding-top: 0; /* Align text to the top */
         padding-bottom: 0; /* Remove bottom padding */
@@ -329,14 +325,14 @@ input[type="button"] {
     #lightDark {
         font-size: 16px;
         margin-right: 0;
-        top: 4vh;
+        top: 3.5vh;
         padding-top: 0; /* Align text to the top */
         padding-bottom: 0; /* Remove bottom padding */
         overflow: hidden; /* Prevent text from spilling out */
     }
 
     #rotateButton {
-        top: 4vh;
+        top: 3.5vh;
         font-size: 12px; 
         padding-top: 0; /* Align text to the top */
         padding-bottom: 0; /* Remove bottom padding */
