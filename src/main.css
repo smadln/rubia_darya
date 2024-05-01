@@ -123,6 +123,10 @@ input[type="button"] {
     /* Other styles as necessary */
 }
 
+#input-button {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+    opacity: 0.5; /* Optional: makes the button look disabled */
+}
 
 /*# sourceMappingURL=main.css.map*/
 
