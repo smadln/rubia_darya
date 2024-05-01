@@ -114,7 +114,7 @@ stlLoader.load(
 
         tick(); // Start the animation loop
 
-        document.getElementById('rotateButton').value = "Stop Rotate"; // Set button to indicate rotation can be stopped
+        document.getElementById('rotateButton').value = "* /"; // Set button to indicate rotation can be stopped
 
         document.getElementById('file-selector').addEventListener('change', openFile, false);
 
@@ -148,7 +148,7 @@ stlLoader.load(
 document.getElementById('rotateButton').addEventListener('click', function() {
     rotateModel = !rotateModel;
     console.log('Rotate model:', rotateModel); // This will log the current state of rotation
-    this.value = rotateModel ? "Stop Rotate" : "Rotate";
+    this.value = rotateModel ? "* /" : "Rotate";
 });
 
 // ... rest of the event listeners and functions ...
@@ -246,5 +246,5 @@ function download(filename, text) {
 
 function toggleRotation() {
     rotateModel = !rotateModel;
-    document.getElementById('rotateButton').value = rotateModel ? "Stop Rotate" : "Rotate";
+    document.getElementById('rotateButton').value = rotateModel ? "* /" : "Rotate";
 }
