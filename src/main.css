@@ -84,33 +84,7 @@ model-viewer::part(interaction-prompt) {
     font-family: Georgia, Tahoma, Verdana;
 }
 
-.button {
-    background-color: #4CAF50; /* Green background */
-    border: none; /* No borders */
-    color: white; /* White text */
-    padding: 15px 32px; /* Padding inside the button */
-    text-align: center; /* Center the text inside the button */
-    text-decoration: none; /* No underline for text */
-    display: inline-block; /* Allows setting dimensions */
-    font-size: 16px; /* Set font size */
-    margin: 4px 2px; /* Spacing around the button */
-    cursor: pointer; /* Cursor to indicate it's clickable */
-    border-radius: 4px; /* Rounded corners */
-    transition-duration: 0.4s; /* Smooth transition for hover effect */
-}
 
-.button:hover {
-    background-color: #45a049; /* Darker shade of green on hover */
-}
-
-/* Additional specific styles if you need different looks for different buttons */
-#rotateButton {
-    /* Styles specific for the rotate button */
-}
-
-#lightDark {
-    /* Styles specific for the input button */
-}
 
 .webgl {
     position: fixed;
