@@ -146,7 +146,8 @@ stlLoader.load(
 // Rotate button event listener
 document.getElementById('rotateButton').addEventListener('click', function() {
     rotateModel = !rotateModel;
-    document.getElementById('rotateButton').value = rotateModel ? "Stop Rotate" : "Rotate";
+    console.log('Rotate model:', rotateModel); // This will log the current state of rotation
+    this.value = rotateModel ? "Stop Rotate" : "Rotate";
 });
 
 // ... rest of the event listeners and functions ...
