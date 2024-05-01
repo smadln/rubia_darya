@@ -56,7 +56,7 @@ const renderer = new THREE.WebGLRenderer();
 
 let effect;
 
-let characters = ' .:-+*=#%@$';
+let characters = ' .:-+*=#';
 const effectSize = { amount: .205 };
 let backgroundColor = 'lightblue';
 let ASCIIColor = 'white';
@@ -241,4 +241,9 @@ function download(filename, text) {
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
+}
+
+function toggleRotation() {
+    rotateModel = !rotateModel;
+    document.getElementById('rotateButton').value = rotateModel ? "Stop Rotate" : "Rotate";
 }
