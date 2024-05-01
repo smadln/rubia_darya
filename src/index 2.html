@@ -24,6 +24,12 @@
         <input type="button" id="input-button" value="Upload STL" accept=".stl" onclick='document.getElementById("file-selector").click()'> 
         <input id="lightDark" type="button" value="Dark/Light Mode"> 
         <input id="rotateButton" type="button" value="Stop Rotate"> 
+        <input id="clipboardASCII" type="button" value="Copy to Clipboard"> 
+        <input id="copyASCII" type="button" value="Download Text File"><br>
+        <input id="newASCII" size="12" value="Custom Text" onkeydown="return 13!=event.keyCode"> 
+        <input id="updateASCII" type="button" value="Update ASCII"> 
+        <input id="resetASCII" type="button" value="Reset ASCII"> 
+        <input id="screenshotButton" type="button" value="Screenshot">
         <script>
           /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && (
           document.getElementById("screenshotButton").style.display = "none",
