@@ -188,25 +188,27 @@ function resetASCII() {
     controls = new OrbitControls(camera, effect.domElement);
 }
 
-document.getElementById('lightDark').addEventListener('click', lightDark);
-
-function lightDark() {
+// Light/Dark mode button event listener
+document.getElementById('lightDark').addEventListener('click', function() {
     lightMode = !lightMode;
+    let lightDarkButton = document.getElementById('lightDark');
     if (lightMode) {
         document.getElementById("kofi").style.color = "black";
         document.body.style.backgroundColor = 'white';
         backgroundColor = 'white';
         ASCIIColor = 'black';
+        lightDarkButton.style.color = 'lightblue'; // Change the button text color to lightblue
     } else {
         document.getElementById("kofi").style.color = "white";
         document.body.style.backgroundColor = 'black';
         backgroundColor = 'black';
         ASCIIColor = 'white';
+        lightDarkButton.style.color = ''; // Revert the button text color to default
     }
-
+    
     effect.domElement.style.color = ASCIIColor;
     effect.domElement.style.backgroundColor = backgroundColor;
-}
+});
 
 // Ensure the onWindowResize function is declared to handle any resizing of the window
 window.addEventListener('resize', onWindowResize);
