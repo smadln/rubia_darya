@@ -37,20 +37,18 @@ model-viewer::part(interaction-prompt) {
     top: 4vh; /* Use vh units for vertical positioning */
 }
 
-.top-bar {
-    display: flex;
-    align-items: center; /* This aligns children vertically */
-    position: absolute;
-    top: 4vh; /* Adjust this as needed to set the distance from the top */
-    left: 0;
-    right: 0;
-    justify-content: space-between; /* This spreads out the children */
-    padding: 0 1.5%; /* Adjust this padding as needed */
+.name, .header, .horizontal-list, #lightDark {
+    top: 4vh; /* Adjust to align items from the top */
+    position: absolute; /* Keep absolute positioning for all */
 }
 
 .horizontal-list {
     display: flex;
     list-style-type: none;
+    right: 1.5%; /* Adjust as needed */
+    align-items: center; /* Align the items vertically inside the list */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
 }
   
  /* Add some spacing between list items */
@@ -148,10 +146,12 @@ input[type="button"] {
     border: none; 
     background: none;
     padding: 0; /* Remove padding if not necessary */
+    left: 1.5%; /* Margin from the left of the screen */
     vertical-align: middle; /* This can help align inline or inline-block elements */
     /* Adjust left as needed or use right property if aligning on the right side of the page */
     padding-top: 0; /* Align text to the top */
-    padding-bottom: 0; /* Remove bottom padding */
+    line-height: normal; /* Reset line height */
+    height: auto; /* Allow button height to auto-adjust */
     overflow: hidden; /* Prevent text from spilling out */
 }
 
@@ -225,20 +225,26 @@ input[type="button"] {
 /*# sourceMappingURL=main.css.map*/
 
 @media screen and (max-width: 768px) {
+    .horizontal-list li a, #lightDark {
+        font-size: 16px;
+        top: 4vh;
+    }
+
     .name {
         font-size: 16px;
         margin-right: 0;
     }
     
     #lightDark {
-        font-size: 16px;
+        left: 1%; /* Margin from the left of the screen */
+        font-size: 16px; /* Make sure the font size matches .horizontal-list for alignment */
         padding-top: 0; /* Align text to the top */
         padding-bottom: 0; /* Remove bottom padding */
         overflow: hidden; /* Prevent text from spilling out */
     }
 
     #rotateButton {
-        font-size: 12px; 
+        font-size: 16px; 
         padding-top: 0; /* Align text to the top */
         padding-bottom: 0; /* Remove bottom padding */
         overflow: hidden; /* Prevent text from spilling out */
@@ -250,6 +256,10 @@ input[type="button"] {
         align-items: center;
     }
 
+    .horizontal-list {
+        right: 1%; /* Adjust this value based on your layout and design */
+        top: 4vh;
+    }
 
     .horizontal-list li {
         margin-right: 5px; /* Reduce spacing between list items on smaller screens */
@@ -260,8 +270,23 @@ input[type="button"] {
 
 @media screen and (max-width: 480px) {
     /* Further adjustments for smaller screens can be made here */
+    .name, .horizontal-list li a, #lightDark, #rotateButton {
+        font-size: 12px; /* Adjust font-size for readability on small devices */
+        top: 4vh;
+    }
+    
+    .horizontal-list {
+        right: 0.5%; /* Even smaller margin for smaller screens */
+        top: 4vh;
+    }
+
     .horizontal-list li a {
         font-size: 12px;
+    }
+
+    #lightDark {
+        left: 0.5%; /* Margin from the left of the screen */
+        font-size: 12px; /* Match font-size with .horizontal-list */
     }
 }
 
@@ -273,6 +298,7 @@ input[type="button"] {
 
     #lightDark {
         font-size: 16px;
+        left: 1.5%; /* Margin from the left of the screen */
         padding-top: 0; /* Align text to the top */
         padding-bottom: 0; /* Remove bottom padding */
         overflow: hidden; /* Prevent text from spilling out */
@@ -289,6 +315,10 @@ input[type="button"] {
     header {
         flex-direction: column;
         align-items: center;
+    }
+
+    .horizontal-list {
+        right: 1.5%;
     }
 
     .horizontal-list li {
@@ -297,12 +327,17 @@ input[type="button"] {
 }
 
 @media screen and (min-height: 1000px) and (max-height: 3000px) {
+    .name, .horizontal-list, #lightDark, #rotateButton {
+        top: 4vh;
+    }
+
     .name {
         font-size: 16px;
         margin-right: 0;
     }
 
     #lightDark {
+        left: 1.5%; /* Margin from the left of the screen */
         font-size: 16px;
         padding-top: 0; /* Align text to the top */
         padding-bottom: 0; /* Remove bottom padding */
@@ -310,7 +345,7 @@ input[type="button"] {
     }
 
     #rotateButton {
-        font-size: 12px; 
+        font-size: 16px; 
         padding-top: 0; /* Align text to the top */
         padding-bottom: 0; /* Remove bottom padding */
         overflow: hidden; /* Prevent text from spilling out */
@@ -320,6 +355,10 @@ input[type="button"] {
     header {
         flex-direction: column;
         align-items: center;
+    }
+
+    .horizontal-list {
+        right: 1.5%;
     }
 
     .horizontal-list li {
