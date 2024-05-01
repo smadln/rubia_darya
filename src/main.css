@@ -128,6 +128,30 @@ input[type="button"] {
     opacity: 0.5; /* Optional: makes the button look disabled */
 }
 
+#clipboardASCII {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+}
+
+#copyASCII {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+}
+
+#newASCII {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+}
+
+#updateASCII {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+}
+
+#resetASCII {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+}
+
+#screenshotButton {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+}
+
 /*# sourceMappingURL=main.css.map*/
 
 @media screen and (max-width: 768px) {
