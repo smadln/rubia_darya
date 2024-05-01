@@ -341,6 +341,7 @@ input[type="button"] {
         padding-top: 0; /* Align text to the top */
         padding-bottom: 0; /* Remove bottom padding */
         overflow: hidden; /* Prevent text from spilling out */
+        right: calc(1.5% - 10px); 
     }
 
     header {
