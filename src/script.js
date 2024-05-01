@@ -1,8 +1,8 @@
 import './style.css'
-import * as THREE from './Three.js'
-import { OrbitControls } from './OrbitControls.js'
-import { STLLoader } from './STLLoader.js'
-import { AsciiEffect } from './AsciiEffect.js';
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js'
+import { AsciiEffect } from 'three/examples/jsm/effects/AsciiEffect.js';
 import html2canvas from 'html2canvas';
 
 //LightMode
