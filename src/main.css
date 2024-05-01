@@ -134,7 +134,7 @@ input[type="button"] {
     font-size: 18px;
     font-family: Georgia, Tahoma, Verdana;
     position: absolute;
-    left: 2%; /* Adjust as needed */
+    left: 1.5%; /* Adjust as needed */
     top: 4vh; /* Use vh units for vertical positioning */
     border: none; 
     background: none;
