@@ -56,7 +56,7 @@ const renderer = new THREE.WebGLRenderer();
 
 let effect;
 
-let characters = ' .:-+*=#%@$';
+let characters = ' .:-+*=#';
 const effectSize = { amount: .205 };
 let backgroundColor = 'lightblue';
 let ASCIIColor = 'white';
@@ -181,7 +181,7 @@ document.getElementById('resetASCII').addEventListener('click', resetASCII);
 
 function resetASCII() {
     document.body.removeChild(effect.domElement);
-    characters = ' .:-+*=#%@$';
+    characters = ' .:-+*=#';
     createEffect();
     onWindowResize();
     document.body.appendChild(effect.domElement);
