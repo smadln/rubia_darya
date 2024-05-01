@@ -121,6 +121,9 @@ input[type="button"] {
     color: rgb(255, 255, 110);
     font-size: 18px;
     font-family: Georgia, Tahoma, Verdana;
+    position: absolute;
+    left: 2%; /* Adjust as needed */
+    top: 4vh; /* Use vh units for vertical positioning */
     border: none; 
     background: none;
 }
