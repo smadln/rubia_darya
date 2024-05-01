@@ -36,10 +36,22 @@ model-viewer::part(interaction-prompt) {
 .name {
     top: 4vh; /* Use vh units for vertical positioning */
 }
-  
+
+.name, .header, .horizontal-list, #lightDark {
+    position: absolute;
+    top: 4vh; /* This will align all items from the top */
+}
+
+.name, .header a, .horizontal-list li a, #lightDark {
+    font-size: 18px;
+    line-height: 1.2; /* Adjust this value as needed */
+    font-family: Georgia, Tahoma, Verdana;
+    /* Other styles remain unchanged */
+}
+
 .horizontal-list {
     position: absolute;
-    top: 4.5vh; /* Use vh units for vertical positioning */
+    top: 4vh; /* Use vh units for vertical positioning */
     right: 1.5%; /* Adjust as needed */
     display: flex;
     list-style-type: none;
@@ -116,6 +128,7 @@ input[type="button"] {
     border: none; 
     background: none;
     position: absolute;
+    padding: none;
     top: 4vh; /* Use vh units for vertical positioning */
     right: calc(1.5% - 10px); 
     /* Other existing styles */
@@ -145,6 +158,10 @@ input[type="button"] {
     top: 4vh; /* Use vh units for vertical positioning */
     border: none; 
     background: none;
+    padding: 0; /* Remove padding if not necessary */
+    line-height: 1.2; /* Make sure line-height matches that of other text elements */
+    vertical-align: middle; /* This can help align inline or inline-block elements */
+    /* Adjust left as needed or use right property if aligning on the right side of the page */
 }
 
 #lightDark:hover {
@@ -240,12 +257,17 @@ input[type="button"] {
 
     .horizontal-list {
         right: 10px; /* Adjust the right position for smaller screens */
-        top: 4.5vh;
+        top: 4vh;
     }
 
     .horizontal-list li {
         margin-right: 5px; /* Reduce spacing between list items on smaller screens */
         font-size: 12px; /* Decrease font size for smaller screens */
+    }
+
+    .name, #lightDark, .header, .horizontal-list, #rotateButton {
+        top: 4vh;
+        line-height: 1.2; /* Adjust line height if necessary for smaller screens */
     }
 }
 
