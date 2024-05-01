@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+html, body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+
+html, body {
+    cursor: url('generic-cursor_4.png'), auto; /* Custom cursor for the whole page */
+    background-color: lightblue;
+}
+
+canvas { 
+    display: block;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+form {
+    font-family: 'Courier New';
+    /* position: absolute; */
+    display: block;
+    color: white;
+    /* z-index: 99; */
+    left: 0%;
+    top: 0%;
+    }
+
+#kofi {
+    text-align: left;  
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+input[type="button"] {
+  color: lightblue;
+  margin: 6px;
+  z-index: 1000;
+}
