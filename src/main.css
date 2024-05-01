@@ -117,7 +117,7 @@ input[type="button"] {
     background: none;
     position: absolute;
     top: 4vh; /* Use vh units for vertical positioning */
-    right: calc(1% + 100px); 
+    right: calc(1% + 150px); 
     /* Other existing styles */
     border: none; 
     background: none;
