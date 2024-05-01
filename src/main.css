@@ -135,6 +135,7 @@ input[type="button"] {
     background: none;
     position: fixed; /* Fixed position relative to the viewport */
     bottom: 0;
+    opacity: 0;
 }
 
 #clipboardASCII {
@@ -143,6 +144,7 @@ input[type="button"] {
     background: none;
     position: fixed; /* Fixed position relative to the viewport */
     bottom: 0;
+    opacity: 0;
 }
 
 #copyASCII {
@@ -151,6 +153,7 @@ input[type="button"] {
     background: none;
     position: fixed; /* Fixed position relative to the viewport */
     bottom: 0;
+    opacity: 0;
 }
 
 #newASCII {
@@ -159,6 +162,7 @@ input[type="button"] {
     background: none;
     position: fixed; /* Fixed position relative to the viewport */
     bottom: 0;
+    opacity: 0;
 }
 
 #updateASCII {
@@ -167,6 +171,7 @@ input[type="button"] {
     background: none;
     position: fixed; /* Fixed position relative to the viewport */
     bottom: 0;
+    opacity: 0;
 }
 
 #resetASCII {
@@ -175,6 +180,7 @@ input[type="button"] {
     background: none;
     position: fixed; /* Fixed position relative to the viewport */
     bottom: 0;
+    opacity: 0;
 }
 
 #screenshotButton {
@@ -183,6 +189,7 @@ input[type="button"] {
     background: none;
     position: fixed; /* Fixed position relative to the viewport */
     bottom: 0;
+    opacity: 0;
 }
 
 /*# sourceMappingURL=main.css.map*/
