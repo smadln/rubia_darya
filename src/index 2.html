@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta id="ascii" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <title>Sarah Madeline</title>
-    <link href="main.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="favicon.png">
     <script defer="defer" src="bundle.5f6951b3191a2214dc44 2.js"></script>
-    </style>
-</head>
-<body>
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body>
     <div class="container" id="container">
-        <div class="name">
-            <p>Sarah Madeline</p>
-        </div>
-        <ul class="horizontal-list">
-            <li><a href="./info.html?section=header" onclick="navigateToSection(event, 'header')">about /</a></li>
-            <li><a href="./info.html?section=cv" onclick="navigateToSection(event, 'cv')">cv /</a></li>
-            <li><a href="mailto:sarah.e.madeline@gmail.com">contact</a></li>
-        </ul>
+      <div class="name">
+          <p>Sarah Madeline</p>
+      </div>
+      <ul class="horizontal-list">
+          <li><a href="./info.html?section=header" onclick="navigateToSection(event, 'header')">about /</a></li>
+          <li><a href="./info.html?section=cv" onclick="navigateToSection(event, 'cv')">cv /</a></li>
+          <li><a href="mailto:sarah.e.madeline@gmail.com">contact</a></li>
+      </ul>
     </div>
-    <form method="post" enctype="multipart/form-data" data-html2canvas-ignore="true"></form>
-</body>
+    <form method="post" enctype="multipart/form-data" data-html2canvas-ignore="true">
+      <div id="top">
+        <input id="file-selector" name="files[]" style="display:none" type="file"> 
+        <input type="button" id="input-button" value="Upload STL" accept=".stl" onclick='document.getElementById("file-selector").click()'> 
+        <input id="lightDark" type="button" value="Dark/Light Mode"> 
+        <input id="rotateButton" type="button" value="Rotate"> 
+        <input id="clipboardASCII" type="button" value="Copy to Clipboard"> 
+        <input id="copyASCII" type="button" value="Download Text File"><br>
+        <input id="newASCII" size="12" value="Custom Text" onkeydown="return 13!=event.keyCode"> 
+        <input id="updateASCII" type="button" value="Update ASCII"> 
+        <input id="resetASCII" type="button" value="Reset ASCII"> 
+        <input id="screenshotButton" type="button" value="Screenshot">
+        <script>
+          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && (
+          document.getElementById("screenshotButton").style.display = "none",
+          document.getElementById("input-button").style.display = "none",
+          document.getElementById("copyASCII").style.display = "none",
+          document.getElementById("clipboardASCII").style.display = "none"
+          )
+        </script>
+      </div>
+      <div id="kofi">
+      </div>
+    </form>
+  </body>
 </html>
