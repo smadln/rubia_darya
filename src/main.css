@@ -119,8 +119,10 @@ input[type="button"] {
 }
 
 #lightDark {
-    background-color: #555; /* Dark grey background */
-    /* Other styles as necessary */
+    background-color: transparent; 
+    color: rgb(255, 255, 110);
+    font-size: 18px;
+    font-family: Georgia, Tahoma, Verdana;
 }
 
 #input-button {
