@@ -125,6 +125,10 @@ input[type="button"] {
     background: none;
 }
 
+#lightDark:hover {
+    color: rgb(143, 132, 227); /* Color changes when you hover over the button */
+}
+
 #input-button {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
