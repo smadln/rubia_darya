@@ -113,6 +113,17 @@ input[type="button"] {
   margin: 6px;
 }
 
+#rotateButton {
+    background-color: #f44336; /* Red background */
+    /* Other styles as necessary */
+}
+
+#lightDark {
+    background-color: #555; /* Dark grey background */
+    /* Other styles as necessary */
+}
+
+
 /*# sourceMappingURL=main.css.map*/
 
 @media screen and (max-width: 768px) {
