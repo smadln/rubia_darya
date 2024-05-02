@@ -79,7 +79,7 @@ model-viewer::part(interaction-prompt) {
     cursor: pointer;
     position: absolute;
     margin-left: 5px; /* Ensure there is space between the list and button */
-    top: 10px;
+    top: 12px;
     right: 1.5%;
 }
 
