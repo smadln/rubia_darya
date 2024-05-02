@@ -23,12 +23,13 @@ model-viewer::part(interaction-prompt) {
 
 .top-bar {
     display: flex;
-    justify-content: space-between; /* Places children at the start and end of the container */
-    align-items: center; /* Centers items vertically */
+    justify-content: space-between; /* Align children to the start and end */
+    align-items: center; /* Align children vertically in the center */
     position: absolute;
     top: 4vh;
     left: 1.5%; /* Margin from the left */
     right: 1.5%; /* Margin from the right */
+    width: 97%; /* Adjust based on left and right margins */
 }
 
 form {
@@ -44,8 +45,6 @@ form {
 }
 
 #lightDark {
-    /* Button on the left side */
-    margin-right: auto; /* Pushes everything else to the right */
     font-size: 18px;
     font-family: Georgia, Tahoma, Verdana;
     color: rgb(255, 255, 110);
@@ -60,13 +59,11 @@ form {
 }
 
 .horizontal-list {
-    /* List on the right side */
     list-style-type: none;
     display: flex;
-    align-items: center; /* Ensures vertical alignment */
-    margin: 0;
+    align-items: center;
     padding: 0;
-    flex-grow: 1; /* Allows the list to fill the space */
+    margin: 0;
 }
 
 .horizontal-list li {
@@ -81,6 +78,7 @@ form {
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0;
 }
 
 .horizontal-list li a:hover,
