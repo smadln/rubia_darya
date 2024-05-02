@@ -87,7 +87,68 @@ input[type="button"] {
     margin: 6px;
 }
 
-/* All other input button styles go here... */
+#input-button {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+    border: none; 
+    background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
+    opacity: 0;
+}
+
+#clipboardASCII {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+    border: none; 
+    background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
+    opacity: 0;
+}
+
+#copyASCII {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+    border: none; 
+    background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
+    opacity: 0;
+}
+
+#newASCII {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+    border: none; 
+    background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
+    opacity: 0;
+}
+
+#updateASCII {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+    border: none; 
+    background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
+    opacity: 0;
+}
+
+#resetASCII {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+    border: none; 
+    background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
+    opacity: 0;
+}
+
+#screenshotButton {
+    pointer-events: none; /* The button won't respond to mouse clicks */
+    border: none; 
+    background: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
+    opacity: 0;
+}
 
 @media screen and (max-width: 768px) {
     .name, .header a, .horizontal-list li a, .horizontal-list li button {
