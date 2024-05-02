@@ -35,8 +35,9 @@ model-viewer::part(interaction-prompt) {
     border: none;
     padding: 0;
     cursor: pointer;
-    position: absolute;
-    left: 2%; /* Adjust as needed */
+    position: absolute; /* Updated position */
+    left: 2%; /* Stick to the left */
+    top: 0; /* Adjust as needed for vertical positioning */
 }
 
 #lightDark:hover {
@@ -49,11 +50,10 @@ model-viewer::part(interaction-prompt) {
     font-family: Georgia, Tahoma, Verdana;
     display: flex;
     align-items: center;
-    margin: 0;
-    padding: 0;
-    position: absolute; /* Updated position */
-    top: 0; /* Adjust as needed for vertical positioning */
+    position: absolute; /* Keep positioned to the right */
+    top: 0; /* Adjust as needed */
     right: 0; /* Stick to the right */
+    padding-left: 0; /* Remove padding to ensure it's flush with the right side */
 }
 
 #rotateButton {
@@ -63,9 +63,8 @@ model-viewer::part(interaction-prompt) {
     background: none;
     border: none;
     cursor: pointer;
-    position: absolute; /* Updated position */
-    top: 5px; /* Align vertically */
-    right: -50px; /* Adjust as needed for horizontal positioning */
+    position: relative; /* Positioned relative to its parent .horizontal-list */
+    margin-left: 10px; /* Ensure there is space between the list and button */
 }
 
 .horizontal-list li {
