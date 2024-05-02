@@ -82,7 +82,6 @@ form {
     background: none;
     border: none;
     cursor: pointer;
-    display: inline-block; /* Aligns text better within the button */
 }
 
 .horizontal-list li a:hover,
