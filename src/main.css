@@ -20,16 +20,6 @@ model-viewer::part(interaction-prompt) {
     display: none;
 }
 
-.top-bar {
-    display: flex;
-    justify-content: space-between; /* This will place children at the start and end of the container */
-    align-items: center; /* Align children vertically */
-    position: absolute;
-    left: 1.5%; /* Left margin */
-    right: 1.5%; /* Right margin */
-    padding: 0; /* No padding needed here */
-}
-
 .name {
     color: rgb(255, 255, 110);
     font-size: 18px;
@@ -38,7 +28,6 @@ model-viewer::part(interaction-prompt) {
 
 #lightDark {
     /* Button on the left side */
-    order: -1; /* Force it to the beginning of the flex container */
     font-size: 18px;
     font-family: Georgia, Tahoma, Verdana;
     color: rgb(255, 255, 110);
@@ -46,6 +35,8 @@ model-viewer::part(interaction-prompt) {
     border: none;
     padding: 0;
     cursor: pointer;
+    position: absolute;
+    left: 2%; /* Adjust as needed */
 }
 
 #lightDark:hover {
@@ -54,19 +45,17 @@ model-viewer::part(interaction-prompt) {
 
 .horizontal-list {
     /* List on the right side */
-    order: 1; /* Ensures it's placed after #lightDark in the flex container */
     list-style-type: none;
     font-family: Georgia, Tahoma, Verdana;
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
-    
+    right: 1%; /* Adjust as needed */
 }
 
 #rotateButton {
     /* Button to the right of the list */
-    order: 2; /* Ensures it's placed after .horizontal-list in the flex container */
     margin-left: 10px; /* Space between the list and the button */
     font-size: 14px;
     color: grey;
@@ -75,6 +64,7 @@ model-viewer::part(interaction-prompt) {
     padding: 0;
     cursor: pointer;
     top: 5px;
+    right: 0.5%; /* Adjust as needed */
 }
 
 .horizontal-list li {
