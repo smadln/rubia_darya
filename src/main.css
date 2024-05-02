@@ -110,7 +110,7 @@ input[type="button"] {
 
 @media screen and (max-width: 768px) {
     .name, .header a, .horizontal-list li a, .horizontal-list li button, #rotateButton {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     #lightDark {
@@ -152,7 +152,7 @@ input[type="button"] {
 
 @media screen and (min-height: 1000px) and (max-height: 3000px) {
     .name, .header a, .horizontal-list li a, .horizontal-list li button, #rotateButton {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     #lightDark {
