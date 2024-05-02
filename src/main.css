@@ -11,6 +11,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; /* Added to ensure it acts as a parent container for absolutely positioned elements */
     background-color: lightblue;
     cursor: url('generic-cursor_4.png'), auto;
     overflow: hidden; /* Prevent scrolling */
@@ -43,8 +44,8 @@ model-viewer::part(interaction-prompt) {
     font-family: Georgia, Tahoma, Verdana;
 }
 
-#lightDark, #rotateButton {
-    z-index: 1000; /* Arbitrary high value to ensure visibility above other elements */
+#lightDark, .horizontal-list, #rotateButton {
+    z-index: 1000; /* A high value to ensure these are on top of other elements */
 }
 
 #lightDark {
