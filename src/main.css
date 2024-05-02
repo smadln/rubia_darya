@@ -22,13 +22,13 @@ model-viewer::part(interaction-prompt) {
 
 .top-bar {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.5%;
+    justify-content: space-between; /* This will place children at the start and end of the container */
+    align-items: center; /* Align children vertically */
     position: absolute;
-    top: 4vh;
-    left: 0;
-    right: 0;
+    top: 4vh; /* Adjust top position for all elements within .top-bar */
+    left: 1.5%; /* Left margin */
+    right: 1.5%; /* Right margin */
+    padding: 0; /* No padding needed here */
 }
 
 .name {
@@ -38,9 +38,13 @@ model-viewer::part(interaction-prompt) {
 }
 
 .horizontal-list {
+    /* List on the right side */
+    order: 2; /* Ensures it's placed after #lightDark in the flex container */
     list-style-type: none;
     display: flex;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .horizontal-list li {
@@ -73,20 +77,85 @@ model-viewer::part(interaction-prompt) {
 }
 
 #lightDark {
-    color: rgb(255, 255, 110);
+    /* Button on the left side */
+    order: 1; /* Force it to the beginning of the flex container */
     font-size: 18px;
-    border: none;
+    color: rgb(255, 255, 110);
     background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 #lightDark:hover {
     color: whitesmoke;
 }
 
+#rotateButton {
+    /* Button to the right of the list */
+    order: 3; /* Ensures it's placed after .horizontal-list in the flex container */
+    margin-left: 10px; /* Space between the list and the button */
+    font-size: 18px;
+    color: grey;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
 input[type="button"] {
     margin: 6px;
 }
 
+@media screen and (max-width: 768px) {
+    .name, .header a, .horizontal-list li a, .horizontal-list li button {
+        font-size: 16px;
+    }
+    .top-bar {
+        top: 3vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .name, .header a, .horizontal-list li a, .horizontal-list li button {
+        font-size: 12px;
+    }
+    .top-bar {
+        top: 2vh;
+    }
+}
+
+@media screen and (min-height: 800px) and (max-height: 1200px) {
+    .name, .header a, .horizontal-list li a, .horizontal-list li button {
+        font-size: 14px;
+    }
+    .top-bar {
+        top: 3.5vh;
+    }
+}
+
+@media screen and (min-height: 1000px) and (max-height: 3000px) {
+    .name, .header a, .horizontal-list li a, .horizontal-list li button {
+        font-size: 16px;
+    }
+    .top-bar {
+        top: 4vh;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    a, button {
+        cursor: url('generic-cursor_3.png'), auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    a, button {
+        cursor: url('generic-cursor_3.png'), auto;
+    }
+}
+
+/* Adjust the following as needed based on the specifics of your site */
 #input-button {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
@@ -148,57 +217,4 @@ input[type="button"] {
     position: fixed; /* Fixed position relative to the viewport */
     bottom: 0;
     opacity: 0;
-}
-
-@media screen and (max-width: 768px) {
-    .name, .header a, .horizontal-list li a, .horizontal-list li button {
-        font-size: 16px;
-    }
-    .top-bar {
-        top: 3vh;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .name, .header a, .horizontal-list li a, .horizontal-list li button {
-        font-size: 12px;
-    }
-    .top-bar {
-        top: 2vh;
-    }
-}
-
-@media screen and (min-height: 800px) and (max-height: 1200px) {
-    .name, .header a, .horizontal-list li a, .horizontal-list li button {
-        font-size: 14px;
-    }
-    .top-bar {
-        top: 3.5vh;
-    }
-}
-
-@media screen and (min-height: 1000px) and (max-height: 3000px) {
-    .name, .header a, .horizontal-list li a, .horizontal-list li button {
-        font-size: 16px;
-    }
-    .top-bar {
-        top: 4vh;
-    }
-}
-
-@media (hover: hover) and (pointer: fine) {
-    a, button {
-        cursor: url('generic-cursor_3.png'), auto;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    a, button {
-        cursor: url('generic-cursor_3.png'), auto;
-    }
-}
-
-/* Adjust the following as needed based on the specifics of your site */
-#kofi, #input-button, #clipboardASCII, #copyASCII, #newASCII, #updateASCII, #resetASCII, #screenshotButton {
-    /* Styles for these elements */
 }
