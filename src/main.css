@@ -111,17 +111,12 @@ model-viewer::part(interaction-prompt) {
     text-decoration: none;
 }
 
-#clipboardASCII, #copyASCII, #newASCII, #updateASCII, #resetASCII, #screenshotButton {
+#input-button, #clipboardASCII, #copyASCII, #newASCII, #updateASCII, #resetASCII, #screenshotButton {
     pointer-events: none;
     border: none;
     opacity: 0;   
     background: none;
 }
-
-input[type="button"] {
-   
-}
-
 
 @media screen and (max-width: 768px) {
     .name, .header a, .horizontal-list li a, .horizontal-list li button, #rotateButton {
