@@ -20,6 +20,12 @@ model-viewer::part(interaction-prompt) {
     display: none;
 }
 
+.container {
+    position: relative;
+    height: 100%; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
+}
+
 .name {
     color: rgb(255, 255, 110);
     font-size: 18px;
@@ -37,7 +43,7 @@ model-viewer::part(interaction-prompt) {
     cursor: pointer;
     position: absolute; /* Updated position */
     left: 2%; /* Stick to the left */
-    top: 0; /* Adjust as needed for vertical positioning */
+    top: 10px; /* Adjust as needed for vertical positioning */
 }
 
 #lightDark:hover {
@@ -47,24 +53,29 @@ model-viewer::part(interaction-prompt) {
 .horizontal-list {
     /* List on the right side */
     list-style-type: none;
+    font-size: 14px;
     font-family: Georgia, Tahoma, Verdana;
+    color: grey;
+    position: absolute;
+    right: 2%; /* Adjust as needed */
+    top: 10px; /* Adjust as needed */
     display: flex;
     align-items: center;
-    position: absolute; /* Keep positioned to the right */
-    top: 0; /* Adjust as needed */
-    right: 0; /* Stick to the right */
-    padding-left: 0; /* Remove padding to ensure it's flush with the right side */
+    margin: 0;
+    padding: 0;
 }
 
 #rotateButton {
     /* Button to the right of the list */
     font-size: 14px;
+    font-family: Georgia, Tahoma, Verdana;
     color: grey;
     background: none;
     border: none;
     cursor: pointer;
-    position: relative; /* Positioned relative to its parent .horizontal-list */
+    position: absolute;
     margin-left: 10px; /* Ensure there is space between the list and button */
+    top: 10px;
 }
 
 .horizontal-list li {
