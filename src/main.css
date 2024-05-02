@@ -69,7 +69,7 @@ model-viewer::part(interaction-prompt) {
 .horizontal-list {
     position: absolute;
     top: 11px;
-    right: 50px;  /* Adjust this value based on your needs, ensuring there's space for #rotateButton */
+    right: 10px;  /* Adjust this value based on your needs, ensuring there's space for #rotateButton */
     display: flex;
     align-items: center;
     list-style-type: none;
