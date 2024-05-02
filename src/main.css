@@ -92,7 +92,7 @@ model-viewer::part(interaction-prompt) {
     cursor: pointer;
     position: absolute;
     margin-left: 5px; /* Ensure there is space between the list and button */
-    top: 12px;
+    top: 13px;
     right: 1.5%;
     z-index: 10; /* Ensure it's above the canvas */
 }
