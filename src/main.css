@@ -39,7 +39,7 @@ model-viewer::part(interaction-prompt) {
 
 #lightDark {
     /* Button on the left side */
-    order: 1; /* Force it to the beginning of the flex container */
+    order: -1; /* Force it to the beginning of the flex container */
     font-size: 18px;
     font-family: Georgia, Tahoma, Verdana;
     color: rgb(255, 255, 110);
@@ -55,7 +55,7 @@ model-viewer::part(interaction-prompt) {
 
 .horizontal-list {
     /* List on the right side */
-    order: 2; /* Ensures it's placed after #lightDark in the flex container */
+    order: 1; /* Ensures it's placed after #lightDark in the flex container */
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@ model-viewer::part(interaction-prompt) {
 
 #rotateButton {
     /* Button to the right of the list */
-    order: 3; /* Ensures it's placed after .horizontal-list in the flex container */
+    order: 2; /* Ensures it's placed after .horizontal-list in the flex container */
     margin-left: 10px; /* Space between the list and the button */
     font-size: 14px;
     color: grey;
