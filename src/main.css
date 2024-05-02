@@ -96,8 +96,11 @@ model-viewer::part(interaction-prompt) {
     text-decoration: none;
 }
 
-input[type="button"] {
-    margin: 6px;
+input[type="button"], #clipboardASCII, #copyASCII, #newASCII, #updateASCII, #resetASCII, #screenshotButton {
+    pointer-events: none;
+    border: none;
+    background: none;
+    opacity: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -154,68 +157,4 @@ input[type="button"] {
     a, button {
         cursor: url('generic-cursor_3.png'), auto;
     }
-}
-
-/* Adjust the following as needed based on the specifics of your site */
-#input-button {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
-}
-
-#clipboardASCII {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
-}
-
-#copyASCII {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
-}
-
-#newASCII {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
-}
-
-#updateASCII {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
-}
-
-#resetASCII {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
-}
-
-#screenshotButton {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
 }
