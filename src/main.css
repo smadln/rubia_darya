@@ -24,12 +24,6 @@ model-viewer::part(interaction-prompt) {
     outline: none;
 }
 
-.container {
-    position: relative;
-    height: 100%; /* Adjust as needed */
-    width: 100%; /* Adjust as needed */
-}
-
 .name {
     color: rgb(255, 255, 110);
     font-size: 18px;
