@@ -49,7 +49,9 @@ model-viewer::part(interaction-prompt) {
 }
 
 #lightDark {
-    /* Button on the left side */
+    position: absolute;
+    top: 10px;
+    left: 10px;
     font-size: 18px;
     font-family: Georgia, Tahoma, Verdana;
     color: rgb(255, 255, 110);
@@ -57,9 +59,7 @@ model-viewer::part(interaction-prompt) {
     border: none;
     padding: 0;
     cursor: pointer;
-    position: absolute; /* Updated position */
-    left: 2%; /* Stick to the left */
-    top: 10px; /* Adjust as needed for vertical positioning */
+    z-index: 1000; /* Ensure it's on top of other elements */
 }
 
 #lightDark:hover {
@@ -67,32 +67,29 @@ model-viewer::part(interaction-prompt) {
 }
 
 .horizontal-list {
-    /* List on the right side */
-    list-style-type: none;
-    font-size: 14px;
-    font-family: Georgia, Tahoma, Verdana;
-    color: grey;
     position: absolute;
-    right: 2%; /* Adjust as needed */
-    top: 11px; /* Adjust as needed */
+    top: 11px;
+    right: 50px;  /* Adjust this value based on your needs, ensuring there's space for #rotateButton */
     display: flex;
     align-items: center;
+    list-style-type: none;
+    font-family: Georgia, Tahoma, Verdana;
     margin: 0;
     padding: 0;
+    z-index: 1000; /* Ensure it's on top of other elements */
 }
 
 #rotateButton {
-    /* Button to the right of the list */
+    position: absolute;
+    top: 13px;
+    right: 10px;
     font-size: 14px;
     font-family: Georgia, Tahoma, Verdana;
     color: grey;
     background: none;
     border: none;
     cursor: pointer;
-    position: absolute;
-    margin-left: 5px; /* Ensure there is space between the list and button */
-    top: 13px;
-    right: 1.5%;
+    z-index: 1000; /* Ensure it's on top of other elements */
 }
 
 .horizontal-list li {
