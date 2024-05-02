@@ -37,7 +37,7 @@ model-viewer::part(interaction-prompt) {
     top: 4vh; /* Use vh units for vertical positioning */
 }
 
-.name, .header, .horizontal-list, #lightDark {
+.name, .header, .horizontal-list, #lightDark, #rotateButton {
     top: 4vh; /* Adjust to align items from the top */
     position: absolute; /* Keep absolute positioning for all */
 }
