@@ -102,6 +102,7 @@ model-viewer::part(interaction-prompt) {
     border: none;
     padding: 0;
     cursor: pointer;
+    opacity: 0;
 }
 
 input[type="button"] {
