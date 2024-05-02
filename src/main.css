@@ -80,7 +80,7 @@ canvas {
     cursor: pointer;
     position: fixed;
     margin-left: 5px; /* Ensure there is space between the list and button */
-    top: 12px;
+    top: 13px;
     right: 10px;
 }
 
