@@ -29,6 +29,7 @@ model-viewer::part(interaction-prompt) {
     top: 4vh;
     left: 1.5%; /* Margin from the left */
     right: 1.5%; /* Margin from the right */
+    width: 97%; /* Adjusting width to prevent overflow */
 }
 
 form {
@@ -46,6 +47,7 @@ form {
 #lightDark {
     /* Button on the left side */
     order: 1; /* Force it to the beginning of the flex container */
+    margin-right: auto; /* Pushes everything else to the right */
     font-size: 18px;
     font-family: Georgia, Tahoma, Verdana;
     color: rgb(255, 255, 110);
@@ -61,10 +63,11 @@ form {
 
 .horizontal-list {
     /* List on the right side */
-    order: 2; /* Ensures it's placed after #lightDark in the flex container */
     list-style-type: none;
     display: flex;
     align-items: center; /* Ensures vertical alignment */
+    margin: 0;
+    padding: 0;
 }
 
 .horizontal-list li {
@@ -113,8 +116,13 @@ form {
     text-decoration: none;
 }
 
-input[type="button"] {
-    margin: 6px;
+input[type="button"], #clipboardASCII, #copyASCII, #newASCII, #updateASCII, #resetASCII, #screenshotButton {
+    pointer-events: none;
+    border: none;
+    background: none;
+    opacity: 0;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -183,68 +191,4 @@ input[type="button"] {
     a, button {
         cursor: url('generic-cursor_3.png'), auto;
     }
-}
-
-/* Adjust the following as needed based on the specifics of your site */
-#input-button {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
-}
-
-#clipboardASCII {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
-}
-
-#copyASCII {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
-}
-
-#newASCII {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
-}
-
-#updateASCII {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
-}
-
-#resetASCII {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
-}
-
-#screenshotButton {
-    pointer-events: none; /* The button won't respond to mouse clicks */
-    border: none; 
-    background: none;
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 0;
-    opacity: 0;
 }
