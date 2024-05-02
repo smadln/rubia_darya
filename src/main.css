@@ -11,6 +11,7 @@ html, body {
     background-color: lightblue;
     cursor: url('generic-cursor_4.png'), auto;
     overflow: hidden;
+    position: relative;
 }
 
 canvas { 
