@@ -11,26 +11,13 @@ html, body {
     background-color: lightblue;
     cursor: url('generic-cursor_4.png'), auto;
     overflow: hidden;
-    position: relative;
-}
-
-canvas { 
-    display: block; /* This ensures the canvas is a block-level element */
-    max-width: 90vw; /* Maximum width to 90% of the viewport width */
-    max-height: 90vh; /* Maximum height to 90% of the viewport height */
-    margin: auto; /* This will center the canvas horizontally */
-    position: absolute; /* Position it absolutely relative to the nearest positioned ancestor */
-    top: 50%; /* Position the top edge of the canvas in the middle of the screen vertically */
-    left: 50%; /* Position the left edge of the canvas in the middle of the screen horizontally */
-    transform: translate(-50%, -50%); /* Offset the canvas back by half its width and height to center it */
 }
 
 model-viewer::part(interaction-prompt) {
     display: none;
 }
 
-.webgl
-{
+.webgl {
     position: fixed;
     top: 0;
     left: 0;
@@ -62,8 +49,8 @@ model-viewer::part(interaction-prompt) {
     border: none;
     padding: 0;
     cursor: pointer;
-    position: absolute; /* Updated position */
-    left: 2%; /* Stick to the left */
+    position: fixed;
+    left: 5px; /* Stick to the left */
     top: 10px; /* Adjust as needed for vertical positioning */
 }
 
@@ -77,10 +64,9 @@ model-viewer::part(interaction-prompt) {
     font-size: 14px;
     font-family: Georgia, Tahoma, Verdana;
     color: grey;
-    position: absolute;
-    right: 2%; /* Adjust as needed */
+    position: fixed;
+    right: 10px; /* Adjust as needed */
     top: 10px; /* Adjust as needed */
-    display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -94,10 +80,10 @@ model-viewer::part(interaction-prompt) {
     background: none;
     border: none;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     margin-left: 5px; /* Ensure there is space between the list and button */
     top: 12px;
-    right: 1.5%;
+    right: 7px;
 }
 
 .horizontal-list li {
