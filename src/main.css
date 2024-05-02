@@ -53,7 +53,7 @@ model-viewer::part(interaction-prompt) {
 
 .horizontal-list li a, 
 .horizontal-list li button {
-    font-size: 18px;
+    font-size: 14px;
     color: grey;
     text-decoration: none;
     background: none;
@@ -80,6 +80,7 @@ model-viewer::part(interaction-prompt) {
     /* Button on the left side */
     order: 1; /* Force it to the beginning of the flex container */
     font-size: 18px;
+    font-family: Georgia, Tahoma, Verdana;
     color: rgb(255, 255, 110);
     background: none;
     border: none;
@@ -95,7 +96,7 @@ model-viewer::part(interaction-prompt) {
     /* Button to the right of the list */
     order: 3; /* Ensures it's placed after .horizontal-list in the flex container */
     margin-left: 10px; /* Space between the list and the button */
-    font-size: 18px;
+    font-size: 14px;
     color: grey;
     background: none;
     border: none;
@@ -108,36 +109,56 @@ input[type="button"] {
 }
 
 @media screen and (max-width: 768px) {
-    .name, .header a, .horizontal-list li a, .horizontal-list li button {
+    .name, .header a, .horizontal-list li a, .horizontal-list li button, #rotateButton {
+        font-size: 14px;
+    }
+
+    #lightDark {
         font-size: 16px;
     }
+
     .top-bar {
         top: 3vh;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .name, .header a, .horizontal-list li a, .horizontal-list li button {
+    .name, .header a, .horizontal-list li a, .horizontal-list li button, #rotateButton {
         font-size: 12px;
     }
+
+    #lightDark {
+        font-size: 16px;
+    }
+
     .top-bar {
         top: 2vh;
     }
 }
 
 @media screen and (min-height: 800px) and (max-height: 1200px) {
-    .name, .header a, .horizontal-list li a, .horizontal-list li button {
+    .name, .header a, .horizontal-list li a, .horizontal-list li button, #rotateButton {
         font-size: 14px;
     }
+
+    #lightDark {
+        font-size: 18px;
+    }
+
     .top-bar {
         top: 3.5vh;
     }
 }
 
 @media screen and (min-height: 1000px) and (max-height: 3000px) {
-    .name, .header a, .horizontal-list li a, .horizontal-list li button {
+    .name, .header a, .horizontal-list li a, .horizontal-list li button, #rotateButton {
         font-size: 16px;
     }
+
+    #lightDark {
+        font-size: 18px;
+    }
+
     .top-bar {
         top: 4vh;
     }
