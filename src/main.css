@@ -25,7 +25,7 @@ model-viewer::part(interaction-prompt) {
     justify-content: space-between; /* This will place children at the start and end of the container */
     align-items: center; /* Align children vertically */
     position: absolute;
-    top: 4vh; /* Adjust top position for all elements within .top-bar */
+    top: 2vh; /* Adjust top position for all elements within .top-bar */
     left: 1.5%; /* Left margin */
     right: 1.5%; /* Right margin */
     padding: 0; /* No padding needed here */
@@ -118,7 +118,7 @@ input[type="button"] {
     }
 
     .top-bar {
-        top: 3vh;
+        top: 2vh;
     }
 }
 
@@ -146,7 +146,7 @@ input[type="button"] {
     }
 
     .top-bar {
-        top: 3.5vh;
+        top: 2vh;
     }
 }
 
@@ -160,7 +160,7 @@ input[type="button"] {
     }
 
     .top-bar {
-        top: 4vh;
+        top: 2vh;
     }
 }
 
