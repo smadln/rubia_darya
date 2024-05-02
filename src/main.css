@@ -51,20 +51,21 @@ model-viewer::part(interaction-prompt) {
     align-items: center;
     margin: 0;
     padding: 0;
-    right: 1%; /* Adjust as needed */
+    position: absolute; /* Updated position */
+    top: 0; /* Adjust as needed for vertical positioning */
+    right: 0; /* Stick to the right */
 }
 
 #rotateButton {
     /* Button to the right of the list */
-    margin-left: 10px; /* Space between the list and the button */
     font-size: 14px;
     color: grey;
     background: none;
     border: none;
-    padding: 0;
     cursor: pointer;
-    top: 5px;
-    right: 0.5%; /* Adjust as needed */
+    position: absolute; /* Updated position */
+    top: 5px; /* Align vertically */
+    right: -50px; /* Adjust as needed for horizontal positioning */
 }
 
 .horizontal-list li {
