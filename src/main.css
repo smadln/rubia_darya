@@ -17,7 +17,14 @@ html, body {
 }
 
 canvas { 
-    display: block;
+    display: block; /* This ensures the canvas is a block-level element */
+    max-width: 90vw; /* Maximum width to 90% of the viewport width */
+    max-height: 90vh; /* Maximum height to 90% of the viewport height */
+    margin: auto; /* This will center the canvas horizontally */
+    position: absolute; /* Position it absolutely relative to the nearest positioned ancestor */
+    top: 50%; /* Position the top edge of the canvas in the middle of the screen vertically */
+    left: 50%; /* Position the left edge of the canvas in the middle of the screen horizontally */
+    transform: translate(-50%, -50%); /* Offset the canvas back by half its width and height to center it */
 }
 
 model-viewer::part(interaction-prompt) {
