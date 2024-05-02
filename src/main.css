@@ -8,8 +8,12 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: lightblue;
     cursor: url('generic-cursor_4.png'), auto;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 canvas { 
