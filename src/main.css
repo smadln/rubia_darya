@@ -61,7 +61,7 @@ model-viewer::part(interaction-prompt) {
     align-items: center;
     margin: 0;
     padding: 0;
-    top: 5px;
+    
 }
 
 #rotateButton {
@@ -79,7 +79,6 @@ model-viewer::part(interaction-prompt) {
 
 .horizontal-list li {
     margin-right: 10px;
-    top: 7px;
 }
 
 .horizontal-list li a, 
