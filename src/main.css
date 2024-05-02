@@ -32,7 +32,7 @@ model-viewer::part(interaction-prompt) {
     font-family: Georgia, Tahoma, Verdana;
 }
 
-#lightDark, #rotateButton {
+#lightDark, #rotateButton, .horizontal-list {
     z-index: 1000; /* Arbitrary high value to ensure visibility above other elements */
 }
 
