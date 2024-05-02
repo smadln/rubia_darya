@@ -29,7 +29,6 @@ model-viewer::part(interaction-prompt) {
     top: 4vh;
     left: 1.5%; /* Margin from the left */
     right: 1.5%; /* Margin from the right */
-    width: 97%; /* Adjusting width to prevent overflow */
 }
 
 form {
@@ -68,6 +67,7 @@ form {
     align-items: center; /* Ensures vertical alignment */
     margin: 0;
     padding: 0;
+    flex-grow: 1; /* Allows the list to fill the space */
 }
 
 .horizontal-list li {
