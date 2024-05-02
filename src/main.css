@@ -8,153 +8,72 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: lightblue;
-}
-html, body {
-    cursor: url('generic-cursor_4.png'), auto; /* Custom cursor for the whole page */
-    background-color: lightblue;
+    cursor: url('generic-cursor_4.png'), auto;
 }
 canvas { 
     display: block;
 }
 model-viewer::part(interaction-prompt) {
     display: none;
-  }
-.name {
+}
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5%;
     position: absolute;
-    left: 2%; /* Adjust as needed */
+    top: 4vh;
+    left: 0;
+    right: 0;
+}
+.name {
     color: rgb(255, 255, 110);
     font-size: 18px;
     font-family: Georgia, Tahoma, Verdana;
-}
-  
-.name {
-    top: 4vh; /* Use vh units for vertical positioning */
 }
 .horizontal-list {
-    position: absolute;
-    right: 1.5%; /* Margin from the right side of the screen */
-    padding-top: 0; /* Align text to the top */
-    display: flex;
     list-style-type: none;
-    align-items: center; /* Align the items vertically */
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
+    display: flex;
+    align-items: center;
 }
-  
- /* Add some spacing between list items */
 .horizontal-list li {
     margin-right: 10px;
-    list-style-type: none;
 }
-  
-/* Style links */
-.horizontal-list li a {
-    font-size: 16px;
-    font-family: Georgia, Tahoma, Verdana;
+.horizontal-list li a, 
+.horizontal-list li button {
+    font-size: 18px;
     color: grey;
-    text-decoration: none; 
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
-  
-.horizontal-list li a:hover {
+.horizontal-list li a:hover,
+.horizontal-list li button:hover {
     color: rgb(143, 132, 227);
 }
-.horizontal-list button {
-    background: none; /* Removes background */
-    border: none; /* Removes border */
-    color: grey; /* Sets text color */
-    text-decoration: none; /* Removes underline */
-    cursor: pointer; /* Changes cursor to pointer */
-    font-family: Georgia, Tahoma, Verdana; /* Matches font with your links */
-    font-size: 16px; /* Matches font size with your links */
-    padding: 0; /* Removes padding */
-}
-  
-.horizontal-list button:hover {
-    color: rgb(143, 132, 227); /* Color changes when you hover over the button */
-}
-/* For info page */
-.header {
-    padding-top: 0; /* Align text to the top */
-}
 .header a {
-    position: absolute;
-    left: 2%; /* Adjust as needed */
     color: rgb(255, 255, 110);
     font-size: 18px;
-    font-family: Georgia, Tahoma, Verdana;
 }
 .header a:hover {
     color: rgb(143, 132, 227);
     text-decoration: none;
-    font-size: 18px;
-    font-family: Georgia, Tahoma, Verdana;
-}
-.webgl {
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
-}
-form {
-    font-family: 'Courier New';
-    /* position: absolute; */
-    display: block;
-    color: lightblue;
-    /* z-index: 99; */
-    left: 0%;
-    top: 0%;
-}
-#kofi {
-    text-align: left;  
-    position: fixed;
-    left: 0;
-    bottom: 0;
-}
-input[type="button"] {
-  margin: 6px;
-}
-#rotateButton {
-    border: none; 
-    background: none;
-    left: 1%;
-    margin-right: 1%;
-    margin-left: 10px; /* Adjust the margin if necessary */
-    font-size: 16px;
-    font-family: Georgia, Tahoma, Verdana;
-    color: grey;
-    text-decoration: none;
-    vertical-align: middle; /* This can help align inline or inline-block elements */
-    /* Adjust left as needed or use right property if aligning on the right side of the page */
-    padding-top: 0; /* Align text to the top */
-    padding: 0; /* Remove padding if not necessary */
-    line-height: normal; /* Reset line height */
-    height: auto; /* Allow button height to auto-adjust */
-    overflow: hidden; /* Prevent text from spilling out */
-}
-#rotateButton:hover {
-    color: rgb(143, 132, 227); /* Color changes when you hover over the button */
-}
-.light-mode-active {
-    color: lightblue; /* The color when light mode is active */
 }
 #lightDark {
     color: rgb(255, 255, 110);
     font-size: 18px;
-    font-family: Georgia, Tahoma, Verdana;
-    border: none; 
+    border: none;
     background: none;
-    padding: 0; /* Remove padding if not necessary */
-    margin-left: 1.5%; /* Margin from the left side of the screen */
-    vertical-align: middle; /* This can help align inline or inline-block elements */
-    /* Adjust left as needed or use right property if aligning on the right side of the page */
-    padding-top: 0; /* Align text to the top */
-    line-height: normal; /* Reset line height */
-    height: auto; /* Allow button height to auto-adjust */
-    overflow: hidden; /* Prevent text from spilling out */
 }
 #lightDark:hover {
-    color: whitesmoke; /* Color changes when you hover over the button */
+    color: whitesmoke;
 }
+input[type="button"] {
+    margin: 6px;
+}
+
+/* All other input button styles go here... */
 #input-button {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
@@ -163,6 +82,7 @@ input[type="button"] {
     bottom: 0;
     opacity: 0;
 }
+
 #clipboardASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
@@ -171,6 +91,7 @@ input[type="button"] {
     bottom: 0;
     opacity: 0;
 }
+
 #copyASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
@@ -179,6 +100,7 @@ input[type="button"] {
     bottom: 0;
     opacity: 0;
 }
+
 #newASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
@@ -187,6 +109,7 @@ input[type="button"] {
     bottom: 0;
     opacity: 0;
 }
+
 #updateASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
@@ -195,6 +118,7 @@ input[type="button"] {
     bottom: 0;
     opacity: 0;
 }
+
 #resetASCII {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
@@ -203,6 +127,7 @@ input[type="button"] {
     bottom: 0;
     opacity: 0;
 }
+
 #screenshotButton {
     pointer-events: none; /* The button won't respond to mouse clicks */
     border: none; 
@@ -211,131 +136,50 @@ input[type="button"] {
     bottom: 0;
     opacity: 0;
 }
-/*# sourceMappingURL=main.css.map*/
+
 @media screen and (max-width: 768px) {
-    .name {
+    .name, .header a, .horizontal-list li a, .horizontal-list li button {
         font-size: 16px;
-        margin-right: 0;
     }
-    
-    #lightDark {
-        margin-left: 1%; /* Margin from the left of the screen */
-        font-size: 16px; /* Make sure the font size matches .horizontal-list for alignment */
-        padding-top: 0; /* Align text to the top */
-        padding-bottom: 0; /* Remove bottom padding */
-        overflow: hidden; /* Prevent text from spilling out */
-    }
-    #rotateButton {
-        font-size: 16px; 
-        right: 0.5%;
-        padding-top: 0; /* Align text to the top */
-        padding-bottom: 0; /* Remove bottom padding */
-        overflow: hidden; /* Prevent text from spilling out */
-        margin-left: 5px;
-    }
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-    .horizontal-list {
-        right: 1%; /* Adjust this value based on your layout and design */
-        padding-top: 0; /* Align text to the top */
-    }
-    .horizontal-list li {
-        margin-right: 5px; /* Reduce spacing between list items on smaller screens */
-        font-size: 12px; /* Decrease font size for smaller screens */
+    .top-bar {
+        top: 3vh;
     }
 }
-@media screen and (max-width: 480px) {    
-    .horizontal-list {
-        right: 1%; /* Even smaller margin for smaller screens */
-        padding-top: 0; /* Align text to the top */
-    }
-    .horizontal-list li a {
+@media screen and (max-width: 480px) {
+    .name, .header a, .horizontal-list li a, .horizontal-list li button {
         font-size: 12px;
     }
-    #lightDark {
-        margin-left: 1%; /* Margin from the left of the screen */
-        font-size: 12px; /* Match font-size with .horizontal-list */
-    }
-    #rotateButtton {
-        right: 0.25%;
-        margin-right: 10px;
+    .top-bar {
+        top: 2vh;
     }
 }
 @media screen and (min-height: 800px) and (max-height: 1200px) {
-    .name {
-        font-size: 16px;
-        margin-right: 0;
+    .name, .header a, .horizontal-list li a, .horizontal-list li button {
+        font-size: 14px;
     }
-    #lightDark {
-        font-size: 16px;
-        margin-left: 1.5%; /* Margin from the left of the screen */
-        padding-top: 0; /* Align text to the top */
-        padding-bottom: 0; /* Remove bottom padding */
-        overflow: hidden; /* Prevent text from spilling out */
-    }
-    #rotateButton {
-        font-size: 12px; 
-        padding-top: 0; /* Align text to the top */
-        padding-bottom: 0; /* Remove bottom padding */
-        overflow: hidden; /* Prevent text from spilling out */
-        margin-left: 5px;
-        right: 1%;
-    }
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-    .horizontal-list {
-        right: 1.5%;
-    }
-    .horizontal-list li {
-        font-size: 12px; /* Decrease font size for smaller screens */
+    .top-bar {
+        top: 3.5vh;
     }
 }
 @media screen and (min-height: 1000px) and (max-height: 3000px) {
-    .name, .horizontal-list, #lightDark, #rotateButton {
-        padding-top: 0; /* Align text to the top */
-    }
-    .name {
+    .name, .header a, .horizontal-list li a, .horizontal-list li button {
         font-size: 16px;
-        margin-right: 0;
     }
-    #lightDark {
-        left: 1.5%; /* Margin from the left of the screen */
-        font-size: 16px;
-        padding-top: 0; /* Align text to the top */
-        padding-bottom: 0; /* Remove bottom padding */
-        overflow: hidden; /* Prevent text from spilling out */
-    }
-    #rotateButton {
-        font-size: 16px; 
-        padding-top: 0; /* Align text to the top */
-        padding-bottom: 0; /* Remove bottom padding */
-        overflow: hidden; /* Prevent text from spilling out */
-        margin-left: 5px;
-        right: 1%
-    }
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-    .horizontal-list {
-        right: 1.5%;
-    }
-    .horizontal-list li {
-        margin-right: 5px; /* Reduce spacing between list items on smaller screens */
-        font-size: 12px; /* Decrease font size for smaller screens */
+    .top-bar {
+        top: 4vh;
     }
 }
 @media (hover: hover) and (pointer: fine) {
-    a {
-        cursor: url('generic-cursor_3.png'), auto; /* Custom cursor for all links */
+    a, button {
+        cursor: url('generic-cursor_3.png'), auto;
     }
 }
 @media screen and (min-width: 1024px) {
-    a {
-        cursor: url('generic-cursor_3.png'), auto; /* Custom cursor for all links */
+    a, button {
+        cursor: url('generic-cursor_3.png'), auto;
     }
+}
+/* Adjust the following as needed based on the specifics of your site */
+#kofi, #input-button, #clipboardASCII, #copyASCII, #newASCII, #updateASCII, #resetASCII, #screenshotButton {
+    /* Styles for these elements */
 }
