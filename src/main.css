@@ -64,7 +64,22 @@ model-viewer::part(interaction-prompt) {
 .horizontal-list li a:hover {
     color: rgb(143, 132, 227);
 }
+
+.horizontal-list button {
+    background: none; /* Removes background */
+    border: none; /* Removes border */
+    color: grey; /* Sets text color */
+    text-decoration: none; /* Removes underline */
+    cursor: pointer; /* Changes cursor to pointer */
+    font-family: Georgia, Tahoma, Verdana; /* Matches font with your links */
+    font-size: 14px; /* Matches font size with your links */
+    padding: 0; /* Removes padding */
+}
   
+.horizontal-list button:hover {
+    color: rgb(143, 132, 227); /* Color changes when you hover over the button */
+}
+
 /* For info page */
 
 .header {
