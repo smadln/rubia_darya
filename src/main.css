@@ -17,6 +17,10 @@ model-viewer::part(interaction-prompt) {
     display: none;
 }
 
+canvas { 
+    display: block;
+}
+
 .webgl {
     position: fixed;
     top: 0;
