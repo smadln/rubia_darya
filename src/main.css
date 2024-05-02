@@ -57,6 +57,7 @@ model-viewer::part(interaction-prompt) {
     /* List on the right side */
     order: 1; /* Ensures it's placed after #lightDark in the flex container */
     list-style-type: none;
+    font-family: Georgia, Tahoma, Verdana;
     display: flex;
     align-items: center;
     margin: 0;
