@@ -8,24 +8,12 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* Added to ensure it acts as a parent container for absolutely positioned elements */
     background-color: lightblue;
     cursor: url('generic-cursor_4.png'), auto;
-    overflow: hidden; /* Prevent scrolling */
 }
 
 canvas { 
-    display: block; /* This ensures the canvas is a block-level element */
-    max-width: 90vw; /* Maximum width to 90% of the viewport width */
-    max-height: 90vh; /* Maximum height to 90% of the viewport height */
-    margin: auto; /* This will center the canvas horizontally */
-    position: absolute; /* Position it absolutely relative to the nearest positioned ancestor */
-    top: 50%; /* Position the top edge of the canvas in the middle of the screen vertically */
-    left: 50%; /* Position the left edge of the canvas in the middle of the screen horizontally */
-    transform: translate(-50%, -50%); /* Offset the canvas back by half its width and height to center it */
+    display: block;
 }
 
 model-viewer::part(interaction-prompt) {
@@ -44,14 +32,12 @@ model-viewer::part(interaction-prompt) {
     font-family: Georgia, Tahoma, Verdana;
 }
 
-#lightDark, .horizontal-list, #rotateButton {
-    z-index: 1000; /* A high value to ensure these are on top of other elements */
+#lightDark, #rotateButton {
+    z-index: 1000; /* Arbitrary high value to ensure visibility above other elements */
 }
 
 #lightDark {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    /* Button on the left side */
     font-size: 18px;
     font-family: Georgia, Tahoma, Verdana;
     color: rgb(255, 255, 110);
@@ -59,7 +45,9 @@ model-viewer::part(interaction-prompt) {
     border: none;
     padding: 0;
     cursor: pointer;
-    z-index: 1000; /* Ensure it's on top of other elements */
+    position: absolute; /* Updated position */
+    left: 2%; /* Stick to the left */
+    top: 10px; /* Adjust as needed for vertical positioning */
 }
 
 #lightDark:hover {
@@ -67,29 +55,32 @@ model-viewer::part(interaction-prompt) {
 }
 
 .horizontal-list {
+    /* List on the right side */
+    list-style-type: none;
+    font-size: 14px;
+    font-family: Georgia, Tahoma, Verdana;
+    color: grey;
     position: absolute;
-    top: 11px;
-    right: 10px;  /* Adjust this value based on your needs, ensuring there's space for #rotateButton */
+    right: 2%; /* Adjust as needed */
+    top: 10px; /* Adjust as needed */
     display: flex;
     align-items: center;
-    list-style-type: none;
-    font-family: Georgia, Tahoma, Verdana;
     margin: 0;
     padding: 0;
-    z-index: 1000; /* Ensure it's on top of other elements */
 }
 
 #rotateButton {
-    position: absolute;
-    top: 13px;
-    right: 10px;
+    /* Button to the right of the list */
     font-size: 14px;
     font-family: Georgia, Tahoma, Verdana;
     color: grey;
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1000; /* Ensure it's on top of other elements */
+    position: absolute;
+    margin-left: 5px; /* Ensure there is space between the list and button */
+    top: 12px;
+    right: 1.5%;
 }
 
 .horizontal-list li {
