@@ -60,7 +60,6 @@ model-viewer::part(interaction-prompt) {
     position: absolute; /* Updated position */
     left: 2%; /* Stick to the left */
     top: 10px; /* Adjust as needed for vertical positioning */
-    z-index: 10; /* Ensure it's above the canvas */
 }
 
 #lightDark:hover {
@@ -80,7 +79,6 @@ model-viewer::part(interaction-prompt) {
     align-items: center;
     margin: 0;
     padding: 0;
-    z-index: 10; /* Ensure it's above the canvas */
 }
 
 #rotateButton {
@@ -95,7 +93,6 @@ model-viewer::part(interaction-prompt) {
     margin-left: 5px; /* Ensure there is space between the list and button */
     top: 13px;
     right: 1.5%;
-    z-index: 10; /* Ensure it's above the canvas */
 }
 
 .horizontal-list li {
