@@ -45,7 +45,6 @@ form {
 
 #lightDark {
     /* Button on the left side */
-    order: 1; /* Force it to the beginning of the flex container */
     margin-right: auto; /* Pushes everything else to the right */
     font-size: 18px;
     font-family: Georgia, Tahoma, Verdana;
