@@ -96,7 +96,10 @@ canvas {
     content: "/* Use cursor to move 3D model */";
     display: block;
     font-size: 12px;
-    color: grey;
+    background-color: grey; /* Background color of the tooltip */
+    color: white; /* Text color of the tooltip */
+    padding: 5px; /* Add padding for better readability */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
     text-align: center;
     position: fixed;
     top: 20px; /* Adjust as needed to position the tooltip below the button */
