@@ -84,6 +84,14 @@ canvas {
     right: 10px;
 }
 
+#rotateButton::after {
+    content: "/* Use cursor to move 3D model */";
+    display: block;
+    font-size: 12px;
+    color: grey;
+    text-align: center;
+}
+
 .horizontal-list li {
     margin-right: 10px;
 }
