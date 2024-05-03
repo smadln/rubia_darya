@@ -94,17 +94,23 @@ canvas {
 
 #rotateButton::after {
     content: "Rotate ^\A/* Use cursor to move 3D model */";
-    display: block;
+    visibility: hidden;
     font-size: 12px;
+    width: 160px; /* Adjust width as needed */
     background-color: grey; /* Background color of the tooltip */
     color: white; /* Text color of the tooltip */
     padding: 5px; /* Add padding for better readability */
     border-radius: 5px; /* Optional: Add border radius for rounded corners */
     text-align: right;
+    z-index: 1;
     position: absolute;
     top: 25px; /* Adjust as needed to position the tooltip below the button */
-    right: 10px; /* Ensure it aligns with the button */
+    right: 0; /* Align to the right side of the button */
 }
+
+#rotateButton:hover::after {
+    visibility: visible;
+  }
 
 .horizontal-list li {
     margin-right: 10px;
