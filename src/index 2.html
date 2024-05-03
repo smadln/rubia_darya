@@ -39,5 +39,22 @@
         </div>
       </form>
     </div>
+    <script>
+      function navigateToSection(e, section) {
+          e.preventDefault();
+          window.location = './info.html?section=' + section; // Remove '-section' from the string
+      }
+    </script>
+    <script>
+      var url = window.location.href;
+      if (url.endsWith('index')) {
+          // Remove 'index' from the URL
+          var newUrl = url.substring(0, url.lastIndexOf('index'));
+          history.replaceState({}, '', newUrl);
+      } else if (url.endsWith('.html')) {
+          // Remove '.html' from the URL
+          history.replaceState({}, '', url.substring(0, url.length - 5));
+      }
+    </script>
   </body>
 </html>
