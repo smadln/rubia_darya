@@ -93,7 +93,7 @@ canvas {
 }
 
 #rotateButton::after {
-    content: "/* Use cursor to move 3D model */";
+    content: "Rotate ^\A/* Use cursor to move 3D model */";
     display: block;
     font-size: 12px;
     background-color: grey; /* Background color of the tooltip */
