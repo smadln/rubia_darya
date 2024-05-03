@@ -101,8 +101,8 @@ canvas {
     padding: 5px; /* Add padding for better readability */
     border-radius: 5px; /* Optional: Add border radius for rounded corners */
     text-align: center;
-    position: fixed;
-    top: 20px; /* Adjust as needed to position the tooltip below the button */
+    position: absolute;
+    top: calc(100% + 5px); /* Position the tooltip below the button */
     right: 10px; /* Ensure it aligns with the button */
 }
 
