@@ -55,6 +55,14 @@ canvas {
     color: whitesmoke;
 }
 
+#lightDark::after {
+    content: attr(title);
+    display: block;
+    font-size: 12px;
+    color: grey;
+    text-align: center;
+}
+
 .horizontal-list {
     /* List on the right side */
     list-style-type: none;
