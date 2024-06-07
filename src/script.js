@@ -14,6 +14,9 @@ const clock = new THREE.Clock();
 // Set rotate boolean variable to true so model rotates by default
 let rotateModel = true;
 
+// Define the rotation speed factor
+const rotationSpeed = 0.5; // Adjust this value to control the rotation speed
+
 //Ugh, don't ask about this stuff
 var userUploaded = false;
 let controls;
@@ -102,7 +105,7 @@ stlLoader.load(
         function tick() {
             if (rotateModel) {
                 const elapsedTime = clock.getElapsedTime();
-                myMesh.rotation.z = elapsedTime;
+                myMesh.rotation.z = elapsedTime * rotationSpeed;
             }
             render();
             window.requestAnimationFrame(tick);
