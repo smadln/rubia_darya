@@ -5,19 +5,16 @@ import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
 import { AsciiEffect } from 'three/examples/jsm/effects/AsciiEffect.js';
 import html2canvas from 'html2canvas';
 
-// LightMode
+//LightMode
 let lightMode = true;
 
-// Create a clock for rotation
+//Create a clock for rotation
 const clock = new THREE.Clock();
 
 // Set rotate boolean variable to true so model rotates by default
 let rotateModel = true;
 
-// Define the rotation speed factor
-const rotationSpeed = 0.5; // Adjust this value to control the rotation speed
-
-// Ugh, don't ask about this stuff
+//Ugh, don't ask about this stuff
 var userUploaded = false;
 let controls;
 
@@ -28,19 +25,19 @@ const myMesh = new THREE.Mesh();
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0, 0, 0);
 
-// Lights
+//Lights
 const pointLight1 = new THREE.PointLight(0xffffff, 1);
 pointLight1.position.set(100, 100, 400);
 scene.add(pointLight1);
 
-const pointLight2 = new THREE.PointLight(0xffffff, 0.5);
+const pointLight2 = new THREE.PointLight(0xffffff, .5);
 pointLight2.position.set(-500, 100, -400);
 scene.add(pointLight2);
 
 // Parameters
 const stlLoader = new STLLoader();
 
-// Material
+//Material
 const material = new THREE.MeshStandardMaterial();
 material.flatShading = true;
 material.side = THREE.DoubleSide;
@@ -60,7 +57,7 @@ const renderer = new THREE.WebGLRenderer();
 let effect;
 
 let characters = ' .:-+*=#';
-const effectSize = { amount: 0.205 };
+const effectSize = { amount: .205 };
 let backgroundColor = 'lightblue';
 let ASCIIColor = 'white';
 
@@ -105,7 +102,7 @@ stlLoader.load(
         function tick() {
             if (rotateModel) {
                 const elapsedTime = clock.getElapsedTime();
-                myMesh.rotation.z = elapsedTime * rotationSpeed;
+                myMesh.rotation.z = elapsedTime;
             }
             render();
             window.requestAnimationFrame(tick);
@@ -139,7 +136,7 @@ stlLoader.load(
                 myMesh.geometry.computeBoundingBox();
                 var bbox = myMesh.geometry.boundingBox;
 
-                myMesh.position.y = ((bbox.max.z - bbox.min.z) / 6);
+                myMesh.position.y = ((bbox.max.z - bbox.min.z) / 6)
 
                 scene.add(myMesh);
             };
@@ -148,7 +145,7 @@ stlLoader.load(
 );
 
 // Rotate button event listener
-document.getElementById('rotateButton').addEventListener('click', function () {
+document.getElementById('rotateButton').addEventListener('click', function() {
     rotateModel = !rotateModel;
     console.log('Rotate model:', rotateModel); // This will log the current state of rotation
     this.value = rotateModel ? "*" : "Rotate";
@@ -192,7 +189,7 @@ function resetASCII() {
 }
 
 // Light/Dark mode button event listener
-document.getElementById('lightDark').addEventListener('click', function () {
+document.getElementById('lightDark').addEventListener('click', function() {
     lightMode = !lightMode;
     let lightDarkButton = document.getElementById('lightDark');
     if (lightMode) {
@@ -208,14 +205,14 @@ document.getElementById('lightDark').addEventListener('click', function () {
         ASCIIColor = 'white';
         lightDarkButton.style.color = ''; // Revert the button text color to default
     }
-
+    
     effect.domElement.style.color = ASCIIColor;
     effect.domElement.style.backgroundColor = backgroundColor;
 });
 
-document.getElementById('lightDark').addEventListener('click', function () {
+document.getElementById('lightDark').addEventListener('click', function() {
     // Assume lightMode is a boolean that tracks whether light mode is active
-    lightMode = !lightMode;
+    lightMode = !lightMode; 
 
     // Toggle light mode styles
     if (lightMode) {
@@ -228,6 +225,7 @@ document.getElementById('lightDark').addEventListener('click', function () {
         this.classList.remove('light-mode-active'); // Remove the class to revert the text color
     }
 });
+
 
 // Ensure the onWindowResize function is declared to handle any resizing of the window
 window.addEventListener('resize', onWindowResize);
