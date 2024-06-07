@@ -15,9 +15,8 @@ const clock = new THREE.Clock();
 let rotateModel = true;
 
 // Define the rotation speed factor
-const rotationSpeed = 0.5; // Adjust this value to control the rotation speed
+const rotationSpeed = 0.01; // Adjust this value to control the rotation speed
 
-//Ugh, don't ask about this stuff
 var userUploaded = false;
 let controls;
 
